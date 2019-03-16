@@ -209,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1486564177-finance-finance-calculator_81497.ico" />
-    <Content Include="smiley.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
