@@ -255,6 +255,8 @@ namespace CalculoIndenizacao
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            empregadoId = int.Parse(cbxEmpregado.SelectedValue.ToString());
+            Existe(empregadoId);
             Calcular();
         }
 
@@ -318,8 +320,7 @@ namespace CalculoIndenizacao
         {
             try
             {
-                empregadoId = int.Parse(cbxEmpregado.SelectedValue.ToString());
-                Existe(empregadoId);
+               
                 ListaComplemento();
                 DadosEmpregado(empregadoId);
                 Reset();
