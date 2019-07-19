@@ -320,7 +320,7 @@ namespace CalculoIndenizacao
         {
             try
             {
-               
+                empregadoId = int.Parse(cbxEmpregado.SelectedValue.ToString());
                 ListaComplemento();
                 DadosEmpregado(empregadoId);
                 Reset();
