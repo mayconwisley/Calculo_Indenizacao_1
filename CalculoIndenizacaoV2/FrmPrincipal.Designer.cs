@@ -56,8 +56,7 @@
             this.menuSair});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuPrincipal.Size = new System.Drawing.Size(773, 28);
+            this.menuPrincipal.Size = new System.Drawing.Size(580, 24);
             this.menuPrincipal.TabIndex = 0;
             this.menuPrincipal.Text = "menuStrip1";
             // 
@@ -67,20 +66,20 @@
             this.menuCadastroEmpregado,
             this.menuCadastroComplemento});
             this.menuCadastro.Name = "menuCadastro";
-            this.menuCadastro.Size = new System.Drawing.Size(80, 24);
+            this.menuCadastro.Size = new System.Drawing.Size(66, 20);
             this.menuCadastro.Text = "Cadastro";
             // 
             // menuCadastroEmpregado
             // 
             this.menuCadastroEmpregado.Name = "menuCadastroEmpregado";
-            this.menuCadastroEmpregado.Size = new System.Drawing.Size(179, 26);
+            this.menuCadastroEmpregado.Size = new System.Drawing.Size(151, 22);
             this.menuCadastroEmpregado.Text = "Empregado";
             this.menuCadastroEmpregado.Click += new System.EventHandler(this.menuCadastroEmpregado_Click);
             // 
             // menuCadastroComplemento
             // 
             this.menuCadastroComplemento.Name = "menuCadastroComplemento";
-            this.menuCadastroComplemento.Size = new System.Drawing.Size(179, 26);
+            this.menuCadastroComplemento.Size = new System.Drawing.Size(151, 22);
             this.menuCadastroComplemento.Text = "Complemento";
             this.menuCadastroComplemento.Click += new System.EventHandler(this.menuCadastroComplemento_Click);
             // 
@@ -90,20 +89,20 @@
             this.menuCalculoCalcular,
             this.menuCalculoListaCalculos});
             this.menuCalculo.Name = "menuCalculo";
-            this.menuCalculo.Size = new System.Drawing.Size(70, 24);
+            this.menuCalculo.Size = new System.Drawing.Size(59, 20);
             this.menuCalculo.Text = "Calculo";
             // 
             // menuCalculoCalcular
             // 
             this.menuCalculoCalcular.Name = "menuCalculoCalcular";
-            this.menuCalculoCalcular.Size = new System.Drawing.Size(194, 26);
+            this.menuCalculoCalcular.Size = new System.Drawing.Size(162, 22);
             this.menuCalculoCalcular.Text = "Calcular";
             this.menuCalculoCalcular.Click += new System.EventHandler(this.calcularToolStripMenuItem_Click);
             // 
             // menuCalculoListaCalculos
             // 
             this.menuCalculoListaCalculos.Name = "menuCalculoListaCalculos";
-            this.menuCalculoListaCalculos.Size = new System.Drawing.Size(194, 26);
+            this.menuCalculoListaCalculos.Size = new System.Drawing.Size(162, 22);
             this.menuCalculoListaCalculos.Text = "Lista de Calculos";
             this.menuCalculoListaCalculos.Click += new System.EventHandler(this.listaDeCalculosToolStripMenuItem_Click);
             // 
@@ -112,20 +111,20 @@
             this.menuRelatorio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuRelatorioListarDemonstrativo});
             this.menuRelatorio.Name = "menuRelatorio";
-            this.menuRelatorio.Size = new System.Drawing.Size(82, 24);
+            this.menuRelatorio.Size = new System.Drawing.Size(66, 20);
             this.menuRelatorio.Text = "Relatório";
             // 
             // menuRelatorioListarDemonstrativo
             // 
             this.menuRelatorioListarDemonstrativo.Name = "menuRelatorioListarDemonstrativo";
-            this.menuRelatorioListarDemonstrativo.Size = new System.Drawing.Size(221, 26);
+            this.menuRelatorioListarDemonstrativo.Size = new System.Drawing.Size(183, 22);
             this.menuRelatorioListarDemonstrativo.Text = "Listar Demonstrativo";
             this.menuRelatorioListarDemonstrativo.Click += new System.EventHandler(this.menuRelatorioListarDemonstrativo_Click);
             // 
             // menuSair
             // 
             this.menuSair.Name = "menuSair";
-            this.menuSair.Size = new System.Drawing.Size(46, 24);
+            this.menuSair.Size = new System.Drawing.Size(38, 20);
             this.menuSair.Text = "Sair";
             this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
@@ -134,30 +133,28 @@
             this.statusPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusPrincipal.Location = new System.Drawing.Point(0, 127);
+            this.statusPrincipal.Location = new System.Drawing.Point(0, 102);
             this.statusPrincipal.Name = "statusPrincipal";
-            this.statusPrincipal.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusPrincipal.Size = new System.Drawing.Size(773, 25);
+            this.statusPrincipal.Size = new System.Drawing.Size(580, 22);
             this.statusPrincipal.TabIndex = 1;
             this.statusPrincipal.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(262, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(209, 17);
             this.toolStripStatusLabel1.Text = "Desenvolvido por: Maycon Wisley v2.0";
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(773, 152);
+            this.ClientSize = new System.Drawing.Size(580, 124);
             this.Controls.Add(this.statusPrincipal);
             this.Controls.Add(this.menuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuPrincipal;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Calculo Indenização";

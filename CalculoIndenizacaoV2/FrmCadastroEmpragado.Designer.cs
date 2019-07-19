@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.TxtNome = new System.Windows.Forms.TextBox();
@@ -41,6 +43,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtDiasBase = new System.Windows.Forms.TextBox();
             this.dgvListaEmpregado = new System.Windows.Forms.DataGridView();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.BtnAlterar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.IdEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatriculaEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +55,6 @@
             this.DemissaoEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MediaEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BaseEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.BtnAlterar = new System.Windows.Forms.Button();
-            this.BtnExcluir = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpregado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,56 +193,6 @@
             this.dgvListaEmpregado.TabIndex = 10;
             this.dgvListaEmpregado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpregado_CellDoubleClick);
             // 
-            // IdEmpregado
-            // 
-            this.IdEmpregado.DataPropertyName = "Id";
-            this.IdEmpregado.HeaderText = "Id";
-            this.IdEmpregado.Name = "IdEmpregado";
-            this.IdEmpregado.ReadOnly = true;
-            this.IdEmpregado.Visible = false;
-            // 
-            // MatriculaEmpregado
-            // 
-            this.MatriculaEmpregado.DataPropertyName = "Matricula";
-            this.MatriculaEmpregado.HeaderText = "Matricula";
-            this.MatriculaEmpregado.Name = "MatriculaEmpregado";
-            this.MatriculaEmpregado.ReadOnly = true;
-            // 
-            // NomeEmpregado
-            // 
-            this.NomeEmpregado.DataPropertyName = "Nome";
-            this.NomeEmpregado.HeaderText = "Nome";
-            this.NomeEmpregado.Name = "NomeEmpregado";
-            this.NomeEmpregado.ReadOnly = true;
-            // 
-            // AdmissaoEmpregado
-            // 
-            this.AdmissaoEmpregado.DataPropertyName = "Admissao";
-            this.AdmissaoEmpregado.HeaderText = "Admissão";
-            this.AdmissaoEmpregado.Name = "AdmissaoEmpregado";
-            this.AdmissaoEmpregado.ReadOnly = true;
-            // 
-            // DemissaoEmpregado
-            // 
-            this.DemissaoEmpregado.DataPropertyName = "Demissao";
-            this.DemissaoEmpregado.HeaderText = "Demissão";
-            this.DemissaoEmpregado.Name = "DemissaoEmpregado";
-            this.DemissaoEmpregado.ReadOnly = true;
-            // 
-            // MediaEmpregado
-            // 
-            this.MediaEmpregado.DataPropertyName = "Media";
-            this.MediaEmpregado.HeaderText = "Media";
-            this.MediaEmpregado.Name = "MediaEmpregado";
-            this.MediaEmpregado.ReadOnly = true;
-            // 
-            // BaseEmpregado
-            // 
-            this.BaseEmpregado.DataPropertyName = "Base";
-            this.BaseEmpregado.HeaderText = "Dias_Base";
-            this.BaseEmpregado.Name = "BaseEmpregado";
-            this.BaseEmpregado.ReadOnly = true;
-            // 
             // btnGravar
             // 
             this.btnGravar.Location = new System.Drawing.Point(407, 13);
@@ -290,6 +242,62 @@
             this.label8.Size = new System.Drawing.Size(231, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "Dois cliques sobre o item para excluir ou alterar.";
+            // 
+            // IdEmpregado
+            // 
+            this.IdEmpregado.DataPropertyName = "Id";
+            this.IdEmpregado.HeaderText = "Id";
+            this.IdEmpregado.Name = "IdEmpregado";
+            this.IdEmpregado.ReadOnly = true;
+            this.IdEmpregado.Visible = false;
+            // 
+            // MatriculaEmpregado
+            // 
+            this.MatriculaEmpregado.DataPropertyName = "Matricula";
+            this.MatriculaEmpregado.HeaderText = "Matricula";
+            this.MatriculaEmpregado.Name = "MatriculaEmpregado";
+            this.MatriculaEmpregado.ReadOnly = true;
+            // 
+            // NomeEmpregado
+            // 
+            this.NomeEmpregado.DataPropertyName = "Nome";
+            this.NomeEmpregado.HeaderText = "Nome";
+            this.NomeEmpregado.Name = "NomeEmpregado";
+            this.NomeEmpregado.ReadOnly = true;
+            // 
+            // AdmissaoEmpregado
+            // 
+            this.AdmissaoEmpregado.DataPropertyName = "Admissao";
+            this.AdmissaoEmpregado.HeaderText = "Admissão";
+            this.AdmissaoEmpregado.Name = "AdmissaoEmpregado";
+            this.AdmissaoEmpregado.ReadOnly = true;
+            // 
+            // DemissaoEmpregado
+            // 
+            this.DemissaoEmpregado.DataPropertyName = "Demissao";
+            this.DemissaoEmpregado.HeaderText = "Demissão";
+            this.DemissaoEmpregado.Name = "DemissaoEmpregado";
+            this.DemissaoEmpregado.ReadOnly = true;
+            // 
+            // MediaEmpregado
+            // 
+            this.MediaEmpregado.DataPropertyName = "Media";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.MediaEmpregado.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MediaEmpregado.HeaderText = "Media";
+            this.MediaEmpregado.Name = "MediaEmpregado";
+            this.MediaEmpregado.ReadOnly = true;
+            // 
+            // BaseEmpregado
+            // 
+            this.BaseEmpregado.DataPropertyName = "Base";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.BaseEmpregado.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BaseEmpregado.HeaderText = "Dias_Base";
+            this.BaseEmpregado.Name = "BaseEmpregado";
+            this.BaseEmpregado.ReadOnly = true;
             // 
             // FrmCadastroEmpragado
             // 
@@ -347,6 +355,7 @@
         private System.Windows.Forms.Button BtnAlterar;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEmpregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatriculaEmpregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeEmpregado;
@@ -354,6 +363,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DemissaoEmpregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn MediaEmpregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn BaseEmpregado;
-        private System.Windows.Forms.Label label8;
     }
 }
