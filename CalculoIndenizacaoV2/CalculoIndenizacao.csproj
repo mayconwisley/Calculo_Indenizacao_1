@@ -55,6 +55,15 @@
     <ApplicationIcon>1486564177-finance-finance-calculator_81497.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -137,6 +146,24 @@
     </Compile>
     <Compile Include="Relatorios\RelatorioDemonstrativo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UCCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCadastro.Designer.cs">
+      <DependentUpon>UCCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcCalculo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcCalculo.Designer.cs">
+      <DependentUpon>UcCalculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRelatorio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRelatorio.Designer.cs">
+      <DependentUpon>UCRelatorio.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmCadastroComplemento.resx">
       <DependentUpon>FrmCadastroComplemento.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +197,15 @@
     </Compile>
     <EmbeddedResource Include="Relatorios\Demonstrativo.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCadastro.resx">
+      <DependentUpon>UCCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcCalculo.resx">
+      <DependentUpon>UcCalculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRelatorio.resx">
+      <DependentUpon>UCRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

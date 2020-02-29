@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblDadosEmpregado = new System.Windows.Forms.Label();
             this.cbxEmpregado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CbCalcFGTS40 = new System.Windows.Forms.CheckBox();
+            this.CbCalcFGTS8 = new System.Windows.Forms.CheckBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lblDiasEstabilidade = new System.Windows.Forms.Label();
             this.mktDataEstabilidade = new System.Windows.Forms.MaskedTextBox();
@@ -50,8 +52,6 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.CbCalcFGTS8 = new System.Windows.Forms.CheckBox();
-            this.CbCalcFGTS40 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.lblDadosEmpregado);
             this.groupBox1.Controls.Add(this.cbxEmpregado);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(20, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(377, 118);
             this.groupBox1.TabIndex = 0;
@@ -107,12 +107,38 @@
             this.groupBox2.Controls.Add(this.lblDiasEstabilidade);
             this.groupBox2.Controls.Add(this.mktDataEstabilidade);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(267, 136);
+            this.groupBox2.Location = new System.Drawing.Point(275, 187);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(315, 352);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Calculos";
+            // 
+            // CbCalcFGTS40
+            // 
+            this.CbCalcFGTS40.AutoSize = true;
+            this.CbCalcFGTS40.Checked = true;
+            this.CbCalcFGTS40.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CbCalcFGTS40.Location = new System.Drawing.Point(9, 81);
+            this.CbCalcFGTS40.Name = "CbCalcFGTS40";
+            this.CbCalcFGTS40.Size = new System.Drawing.Size(104, 17);
+            this.CbCalcFGTS40.TabIndex = 5;
+            this.CbCalcFGTS40.Text = "Calc. FGTS 40%";
+            this.CbCalcFGTS40.UseVisualStyleBackColor = true;
+            this.CbCalcFGTS40.CheckedChanged += new System.EventHandler(this.CbCalcFGTS40_CheckedChanged);
+            // 
+            // CbCalcFGTS8
+            // 
+            this.CbCalcFGTS8.AutoSize = true;
+            this.CbCalcFGTS8.Checked = true;
+            this.CbCalcFGTS8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CbCalcFGTS8.Location = new System.Drawing.Point(9, 58);
+            this.CbCalcFGTS8.Name = "CbCalcFGTS8";
+            this.CbCalcFGTS8.Size = new System.Drawing.Size(98, 17);
+            this.CbCalcFGTS8.TabIndex = 4;
+            this.CbCalcFGTS8.Text = "Calc. FGTS 8%";
+            this.CbCalcFGTS8.UseVisualStyleBackColor = true;
+            this.CbCalcFGTS8.CheckedChanged += new System.EventHandler(this.CbCalcFGTS8_CheckedChanged);
             // 
             // lblInfo
             // 
@@ -157,7 +183,7 @@
             this.groupBox3.Controls.Add(this.dgvListaLancamento);
             this.groupBox3.Controls.Add(this.lblTotais);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(12, 136);
+            this.groupBox3.Location = new System.Drawing.Point(20, 187);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(249, 352);
             this.groupBox3.TabIndex = 7;
@@ -206,10 +232,10 @@
             // 
             this.ValorComplemento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ValorComplemento.DataPropertyName = "Valor";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ValorComplemento.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ValorComplemento.DefaultCellStyle = dataGridViewCellStyle2;
             this.ValorComplemento.HeaderText = "Valor";
             this.ValorComplemento.Name = "ValorComplemento";
             this.ValorComplemento.ReadOnly = true;
@@ -254,7 +280,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(410, 19);
+            this.btnCalcular.Location = new System.Drawing.Point(418, 70);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(172, 33);
             this.btnCalcular.TabIndex = 4;
@@ -265,7 +291,7 @@
             // btnGravar
             // 
             this.btnGravar.Enabled = false;
-            this.btnGravar.Location = new System.Drawing.Point(410, 58);
+            this.btnGravar.Location = new System.Drawing.Point(418, 109);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(172, 33);
             this.btnGravar.TabIndex = 5;
@@ -276,7 +302,7 @@
             // btnImprimir
             // 
             this.btnImprimir.Enabled = false;
-            this.btnImprimir.Location = new System.Drawing.Point(410, 97);
+            this.btnImprimir.Location = new System.Drawing.Point(418, 148);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(172, 33);
             this.btnImprimir.TabIndex = 6;
@@ -284,49 +310,23 @@
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // CbCalcFGTS8
-            // 
-            this.CbCalcFGTS8.AutoSize = true;
-            this.CbCalcFGTS8.Checked = true;
-            this.CbCalcFGTS8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CbCalcFGTS8.Location = new System.Drawing.Point(9, 58);
-            this.CbCalcFGTS8.Name = "CbCalcFGTS8";
-            this.CbCalcFGTS8.Size = new System.Drawing.Size(98, 17);
-            this.CbCalcFGTS8.TabIndex = 4;
-            this.CbCalcFGTS8.Text = "Calc. FGTS 8%";
-            this.CbCalcFGTS8.UseVisualStyleBackColor = true;
-            this.CbCalcFGTS8.CheckedChanged += new System.EventHandler(this.CbCalcFGTS8_CheckedChanged);
-            // 
-            // CbCalcFGTS40
-            // 
-            this.CbCalcFGTS40.AutoSize = true;
-            this.CbCalcFGTS40.Checked = true;
-            this.CbCalcFGTS40.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CbCalcFGTS40.Location = new System.Drawing.Point(9, 81);
-            this.CbCalcFGTS40.Name = "CbCalcFGTS40";
-            this.CbCalcFGTS40.Size = new System.Drawing.Size(104, 17);
-            this.CbCalcFGTS40.TabIndex = 5;
-            this.CbCalcFGTS40.Text = "Calc. FGTS 40%";
-            this.CbCalcFGTS40.UseVisualStyleBackColor = true;
-            this.CbCalcFGTS40.CheckedChanged += new System.EventHandler(this.CbCalcFGTS40_CheckedChanged);
-            // 
             // FrmCalculoEstabilidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 500);
+            this.ClientSize = new System.Drawing.Size(611, 557);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCalculoEstabilidade";
+            this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculo Estabilidade";
             this.Load += new System.EventHandler(this.FrmCalculoEstabilidade_Load);
             this.groupBox1.ResumeLayout(false);

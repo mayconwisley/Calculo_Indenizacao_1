@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbxEmpregado = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbxEmpregado);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(17, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 68);
             this.groupBox1.TabIndex = 1;
@@ -99,7 +99,7 @@
             this.groupBox2.Controls.Add(this.cbTipo);
             this.groupBox2.Controls.Add(this.txtDecricao);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 86);
+            this.groupBox2.Location = new System.Drawing.Point(17, 137);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(474, 267);
             this.groupBox2.TabIndex = 3;
@@ -187,10 +187,10 @@
             // 
             this.ValorComplemento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ValorComplemento.DataPropertyName = "Valor";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.ValorComplemento.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ValorComplemento.DefaultCellStyle = dataGridViewCellStyle2;
             this.ValorComplemento.HeaderText = "Valor";
             this.ValorComplemento.Name = "ValorComplemento";
             this.ValorComplemento.ReadOnly = true;
@@ -266,7 +266,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 363);
+            this.label1.Location = new System.Drawing.Point(17, 414);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 13);
             this.label1.TabIndex = 4;
@@ -276,16 +276,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 385);
+            this.ClientSize = new System.Drawing.Size(509, 444);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCadastroComplemento";
+            this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Complemento";
             this.Load += new System.EventHandler(this.FrmCadastroComplemento_Load);
             this.groupBox1.ResumeLayout(false);

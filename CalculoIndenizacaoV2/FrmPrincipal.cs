@@ -3,12 +3,37 @@ using System.Windows.Forms;
 
 namespace CalculoIndenizacao
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
+
+
+        static FrmPrincipal _instance;
+
+        public static FrmPrincipal Instance
+
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new FrmPrincipal();
+                }
+                return _instance;
+            }
+        }
+
+
+        public MetroFramework.Controls.MetroPanel MetroContainer
+        {
+            get { return MtPnlPrincipal; }
+            set { MtPnlPrincipal = value; }
+        }
+
         public FrmPrincipal()
         {
             InitializeComponent();
         }
+
         FrmCadastroEmpragado cadastroEmpragado;
         FrmCadastroComplemento cadastroComplemento;
         FrmCalculoEstabilidade calculoEstabilidade;
@@ -102,6 +127,50 @@ namespace CalculoIndenizacao
         }
 
         private void menuSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MtTlCadastro_Click(object sender, EventArgs e)
+        {
+            if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UCCadastro"))
+            {
+                UCCadastro uCCadastro = new UCCadastro();
+                uCCadastro.Dock = DockStyle.Fill;
+                FrmPrincipal.Instance.MetroContainer.Controls.Add(uCCadastro);
+            }
+            FrmPrincipal.Instance.MetroContainer.Controls["UCCadastro"].BringToFront();
+        }
+
+        private void MtTlCalculo_Click(object sender, EventArgs e)
+        {
+            if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UcCalculo"))
+            {
+                UcCalculo ucCalculo = new UcCalculo();
+                ucCalculo.Dock = DockStyle.Fill;
+                FrmPrincipal.Instance.MetroContainer.Controls.Add(ucCalculo);
+            }
+            FrmPrincipal.Instance.MetroContainer.Controls["UcCalculo"].BringToFront();
+        }
+
+        private void MtTlRelatorio_Click(object sender, EventArgs e)
+        {
+            if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UCRelatorio"))
+            {
+                UCRelatorio uCRelatorio = new UCRelatorio();
+                uCRelatorio.Dock = DockStyle.Fill;
+                FrmPrincipal.Instance.MetroContainer.Controls.Add(uCRelatorio);
+            }
+            FrmPrincipal.Instance.MetroContainer.Controls["UCRelatorio"].BringToFront();
+
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            _instance = this;
+        }
+
+        private void MtTlSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

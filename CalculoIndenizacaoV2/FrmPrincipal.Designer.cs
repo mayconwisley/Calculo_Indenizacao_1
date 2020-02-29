@@ -29,158 +29,112 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            this.menuPrincipal = new System.Windows.Forms.MenuStrip();
-            this.menuCadastro = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCadastroEmpregado = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCadastroComplemento = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCalculo = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCalculoCalcular = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCalculoListaCalculos = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuRelatorio = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuRelatorioListarDemonstrativo = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusPrincipal = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.menuPrincipal.SuspendLayout();
-            this.statusPrincipal.SuspendLayout();
+            this.MtTlCadastro = new MetroFramework.Controls.MetroTile();
+            this.MtTlCalculo = new MetroFramework.Controls.MetroTile();
+            this.MtTlRelatorio = new MetroFramework.Controls.MetroTile();
+            this.MtTlSair = new MetroFramework.Controls.MetroTile();
+            this.MtPnlPrincipal = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
-            // menuPrincipal
+            // MtTlCadastro
             // 
-            this.menuPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.menuPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCadastro,
-            this.menuCalculo,
-            this.menuRelatorio,
-            this.menuSair});
-            this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(580, 24);
-            this.menuPrincipal.TabIndex = 0;
-            this.menuPrincipal.Text = "menuStrip1";
+            this.MtTlCadastro.ActiveControl = null;
+            this.MtTlCadastro.Location = new System.Drawing.Point(23, 63);
+            this.MtTlCadastro.Name = "MtTlCadastro";
+            this.MtTlCadastro.Size = new System.Drawing.Size(126, 98);
+            this.MtTlCadastro.TabIndex = 2;
+            this.MtTlCadastro.Text = "Cadastro";
+            this.MtTlCadastro.UseSelectable = true;
+            this.MtTlCadastro.Click += new System.EventHandler(this.MtTlCadastro_Click);
             // 
-            // menuCadastro
+            // MtTlCalculo
             // 
-            this.menuCadastro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCadastroEmpregado,
-            this.menuCadastroComplemento});
-            this.menuCadastro.Name = "menuCadastro";
-            this.menuCadastro.Size = new System.Drawing.Size(66, 20);
-            this.menuCadastro.Text = "Cadastro";
+            this.MtTlCalculo.ActiveControl = null;
+            this.MtTlCalculo.Location = new System.Drawing.Point(155, 63);
+            this.MtTlCalculo.Name = "MtTlCalculo";
+            this.MtTlCalculo.Size = new System.Drawing.Size(126, 98);
+            this.MtTlCalculo.TabIndex = 2;
+            this.MtTlCalculo.Text = "Calculo";
+            this.MtTlCalculo.UseSelectable = true;
+            this.MtTlCalculo.Click += new System.EventHandler(this.MtTlCalculo_Click);
             // 
-            // menuCadastroEmpregado
+            // MtTlRelatorio
             // 
-            this.menuCadastroEmpregado.Name = "menuCadastroEmpregado";
-            this.menuCadastroEmpregado.Size = new System.Drawing.Size(151, 22);
-            this.menuCadastroEmpregado.Text = "Empregado";
-            this.menuCadastroEmpregado.Click += new System.EventHandler(this.menuCadastroEmpregado_Click);
+            this.MtTlRelatorio.ActiveControl = null;
+            this.MtTlRelatorio.Location = new System.Drawing.Point(287, 63);
+            this.MtTlRelatorio.Name = "MtTlRelatorio";
+            this.MtTlRelatorio.Size = new System.Drawing.Size(126, 98);
+            this.MtTlRelatorio.TabIndex = 2;
+            this.MtTlRelatorio.Text = "Relatório";
+            this.MtTlRelatorio.UseSelectable = true;
+            this.MtTlRelatorio.Click += new System.EventHandler(this.MtTlRelatorio_Click);
             // 
-            // menuCadastroComplemento
+            // MtTlSair
             // 
-            this.menuCadastroComplemento.Name = "menuCadastroComplemento";
-            this.menuCadastroComplemento.Size = new System.Drawing.Size(151, 22);
-            this.menuCadastroComplemento.Text = "Complemento";
-            this.menuCadastroComplemento.Click += new System.EventHandler(this.menuCadastroComplemento_Click);
+            this.MtTlSair.ActiveControl = null;
+            this.MtTlSair.Location = new System.Drawing.Point(419, 63);
+            this.MtTlSair.Name = "MtTlSair";
+            this.MtTlSair.Size = new System.Drawing.Size(126, 98);
+            this.MtTlSair.Style = MetroFramework.MetroColorStyle.Red;
+            this.MtTlSair.TabIndex = 2;
+            this.MtTlSair.Text = "Sair";
+            this.MtTlSair.UseSelectable = true;
+            this.MtTlSair.Click += new System.EventHandler(this.MtTlSair_Click);
             // 
-            // menuCalculo
+            // MtPnlPrincipal
             // 
-            this.menuCalculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCalculoCalcular,
-            this.menuCalculoListaCalculos});
-            this.menuCalculo.Name = "menuCalculo";
-            this.menuCalculo.Size = new System.Drawing.Size(59, 20);
-            this.menuCalculo.Text = "Calculo";
+            this.MtPnlPrincipal.HorizontalScrollbarBarColor = true;
+            this.MtPnlPrincipal.HorizontalScrollbarHighlightOnWheel = false;
+            this.MtPnlPrincipal.HorizontalScrollbarSize = 10;
+            this.MtPnlPrincipal.Location = new System.Drawing.Point(23, 167);
+            this.MtPnlPrincipal.Name = "MtPnlPrincipal";
+            this.MtPnlPrincipal.Size = new System.Drawing.Size(522, 100);
+            this.MtPnlPrincipal.TabIndex = 3;
+            this.MtPnlPrincipal.VerticalScrollbarBarColor = true;
+            this.MtPnlPrincipal.VerticalScrollbarHighlightOnWheel = false;
+            this.MtPnlPrincipal.VerticalScrollbarSize = 10;
             // 
-            // menuCalculoCalcular
+            // metroLabel1
             // 
-            this.menuCalculoCalcular.Name = "menuCalculoCalcular";
-            this.menuCalculoCalcular.Size = new System.Drawing.Size(162, 22);
-            this.menuCalculoCalcular.Text = "Calcular";
-            this.menuCalculoCalcular.Click += new System.EventHandler(this.calcularToolStripMenuItem_Click);
-            // 
-            // menuCalculoListaCalculos
-            // 
-            this.menuCalculoListaCalculos.Name = "menuCalculoListaCalculos";
-            this.menuCalculoListaCalculos.Size = new System.Drawing.Size(162, 22);
-            this.menuCalculoListaCalculos.Text = "Lista de Calculos";
-            this.menuCalculoListaCalculos.Click += new System.EventHandler(this.listaDeCalculosToolStripMenuItem_Click);
-            // 
-            // menuRelatorio
-            // 
-            this.menuRelatorio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuRelatorioListarDemonstrativo});
-            this.menuRelatorio.Name = "menuRelatorio";
-            this.menuRelatorio.Size = new System.Drawing.Size(66, 20);
-            this.menuRelatorio.Text = "Relatório";
-            // 
-            // menuRelatorioListarDemonstrativo
-            // 
-            this.menuRelatorioListarDemonstrativo.Name = "menuRelatorioListarDemonstrativo";
-            this.menuRelatorioListarDemonstrativo.Size = new System.Drawing.Size(183, 22);
-            this.menuRelatorioListarDemonstrativo.Text = "Listar Demonstrativo";
-            this.menuRelatorioListarDemonstrativo.Click += new System.EventHandler(this.menuRelatorioListarDemonstrativo_Click);
-            // 
-            // menuSair
-            // 
-            this.menuSair.Name = "menuSair";
-            this.menuSair.Size = new System.Drawing.Size(38, 20);
-            this.menuSair.Text = "Sair";
-            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
-            // 
-            // statusPrincipal
-            // 
-            this.statusPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusPrincipal.Location = new System.Drawing.Point(0, 102);
-            this.statusPrincipal.Name = "statusPrincipal";
-            this.statusPrincipal.Size = new System.Drawing.Size(580, 22);
-            this.statusPrincipal.TabIndex = 1;
-            this.statusPrincipal.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(209, 17);
-            this.toolStripStatusLabel1.Text = "Desenvolvido por: Maycon Wisley v2.0";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(5, 279);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(233, 19);
+            this.metroLabel1.TabIndex = 4;
+            this.metroLabel1.Text = "Desenvolvido por: Maycon Wisley v2.0";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(580, 124);
-            this.Controls.Add(this.statusPrincipal);
-            this.Controls.Add(this.menuPrincipal);
+            this.ClientSize = new System.Drawing.Size(581, 310);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.MtPnlPrincipal);
+            this.Controls.Add(this.MtTlSair);
+            this.Controls.Add(this.MtTlRelatorio);
+            this.Controls.Add(this.MtTlCalculo);
+            this.Controls.Add(this.MtTlCadastro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuPrincipal;
+            this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
+            this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Calculo Indenização";
-            this.menuPrincipal.ResumeLayout(false);
-            this.menuPrincipal.PerformLayout();
-            this.statusPrincipal.ResumeLayout(false);
-            this.statusPrincipal.PerformLayout();
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuPrincipal;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastro;
-        private System.Windows.Forms.ToolStripMenuItem menuCalculo;
-        private System.Windows.Forms.ToolStripMenuItem menuSair;
-        private System.Windows.Forms.StatusStrip statusPrincipal;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroEmpregado;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroComplemento;
-        private System.Windows.Forms.ToolStripMenuItem menuCalculoCalcular;
-        private System.Windows.Forms.ToolStripMenuItem menuRelatorio;
-        private System.Windows.Forms.ToolStripMenuItem menuRelatorioListarDemonstrativo;
-        private System.Windows.Forms.ToolStripMenuItem menuCalculoListaCalculos;
+        private MetroFramework.Controls.MetroTile MtTlCadastro;
+        private MetroFramework.Controls.MetroTile MtTlCalculo;
+        private MetroFramework.Controls.MetroTile MtTlRelatorio;
+        private MetroFramework.Controls.MetroTile MtTlSair;
+        private MetroFramework.Controls.MetroPanel MtPnlPrincipal;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
 

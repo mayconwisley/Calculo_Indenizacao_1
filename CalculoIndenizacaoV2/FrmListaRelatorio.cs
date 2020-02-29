@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace CalculoIndenizacao
 {
-    public partial class FrmListaRelatorio : Form
+    public partial class FrmListaRelatorio : MetroFramework.Forms.MetroForm
     {
         public FrmListaRelatorio()
         {

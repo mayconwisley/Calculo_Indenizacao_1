@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvListarCalculos = new System.Windows.Forms.DataGridView();
             this.EmpregadoMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmpregadoNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,7 +93,7 @@
             this.ComplementoDescricao,
             this.ComplementoValor,
             this.ComplementoTipo});
-            this.dgvListarCalculos.Location = new System.Drawing.Point(12, 25);
+            this.dgvListarCalculos.Location = new System.Drawing.Point(13, 76);
             this.dgvListarCalculos.MultiSelect = false;
             this.dgvListarCalculos.Name = "dgvListarCalculos";
             this.dgvListarCalculos.ReadOnly = true;
@@ -121,9 +121,9 @@
             // EmpregadoAdmissao
             // 
             this.EmpregadoAdmissao.DataPropertyName = "Admissao";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.EmpregadoAdmissao.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle23.Format = "d";
+            dataGridViewCellStyle23.NullValue = null;
+            this.EmpregadoAdmissao.DefaultCellStyle = dataGridViewCellStyle23;
             this.EmpregadoAdmissao.HeaderText = "Admissao";
             this.EmpregadoAdmissao.Name = "EmpregadoAdmissao";
             this.EmpregadoAdmissao.ReadOnly = true;
@@ -132,8 +132,8 @@
             // EmpregadoDemissao
             // 
             this.EmpregadoDemissao.DataPropertyName = "Demissao";
-            dataGridViewCellStyle2.Format = "d";
-            this.EmpregadoDemissao.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle24.Format = "d";
+            this.EmpregadoDemissao.DefaultCellStyle = dataGridViewCellStyle24;
             this.EmpregadoDemissao.HeaderText = "Demissao";
             this.EmpregadoDemissao.Name = "EmpregadoDemissao";
             this.EmpregadoDemissao.ReadOnly = true;
@@ -142,9 +142,9 @@
             // EmpregadoMedia
             // 
             this.EmpregadoMedia.DataPropertyName = "Media";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.EmpregadoMedia.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle25.Format = "N2";
+            this.EmpregadoMedia.DefaultCellStyle = dataGridViewCellStyle25;
             this.EmpregadoMedia.HeaderText = "Media";
             this.EmpregadoMedia.Name = "EmpregadoMedia";
             this.EmpregadoMedia.ReadOnly = true;
@@ -186,9 +186,9 @@
             // CalculoValor_Indenizacao
             // 
             this.CalculoValor_Indenizacao.DataPropertyName = "Valor_Indenizacao";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.CalculoValor_Indenizacao.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Format = "N2";
+            this.CalculoValor_Indenizacao.DefaultCellStyle = dataGridViewCellStyle26;
             this.CalculoValor_Indenizacao.HeaderText = "Valor_Indenizacao";
             this.CalculoValor_Indenizacao.Name = "CalculoValor_Indenizacao";
             this.CalculoValor_Indenizacao.ReadOnly = true;
@@ -197,9 +197,9 @@
             // CalculoValor_Decimo_Terceiro
             // 
             this.CalculoValor_Decimo_Terceiro.DataPropertyName = "Valor_Decimo_Terceiro";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            this.CalculoValor_Decimo_Terceiro.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle27.Format = "N2";
+            this.CalculoValor_Decimo_Terceiro.DefaultCellStyle = dataGridViewCellStyle27;
             this.CalculoValor_Decimo_Terceiro.HeaderText = "Valor_Decimo_Terceiro";
             this.CalculoValor_Decimo_Terceiro.Name = "CalculoValor_Decimo_Terceiro";
             this.CalculoValor_Decimo_Terceiro.ReadOnly = true;
@@ -208,9 +208,9 @@
             // CalculoValor_Ferias
             // 
             this.CalculoValor_Ferias.DataPropertyName = "Valor_Ferias";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            this.CalculoValor_Ferias.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle28.Format = "N2";
+            this.CalculoValor_Ferias.DefaultCellStyle = dataGridViewCellStyle28;
             this.CalculoValor_Ferias.HeaderText = "Valor_Ferias";
             this.CalculoValor_Ferias.Name = "CalculoValor_Ferias";
             this.CalculoValor_Ferias.ReadOnly = true;
@@ -219,9 +219,9 @@
             // CalculoValor_Terco_Ferias
             // 
             this.CalculoValor_Terco_Ferias.DataPropertyName = "Valor_Terco_Ferias";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            this.CalculoValor_Terco_Ferias.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle29.Format = "N2";
+            this.CalculoValor_Terco_Ferias.DefaultCellStyle = dataGridViewCellStyle29;
             this.CalculoValor_Terco_Ferias.HeaderText = "Valor_Terco_Ferias";
             this.CalculoValor_Terco_Ferias.Name = "CalculoValor_Terco_Ferias";
             this.CalculoValor_Terco_Ferias.ReadOnly = true;
@@ -230,9 +230,9 @@
             // CalculoValor_FGTS8
             // 
             this.CalculoValor_FGTS8.DataPropertyName = "Valor_FGTS8";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            this.CalculoValor_FGTS8.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle30.Format = "N2";
+            this.CalculoValor_FGTS8.DefaultCellStyle = dataGridViewCellStyle30;
             this.CalculoValor_FGTS8.HeaderText = "Valor_FGTS_8%";
             this.CalculoValor_FGTS8.Name = "CalculoValor_FGTS8";
             this.CalculoValor_FGTS8.ReadOnly = true;
@@ -241,9 +241,9 @@
             // CalculoValor_FGTS40
             // 
             this.CalculoValor_FGTS40.DataPropertyName = "Valor_FGTS40";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            this.CalculoValor_FGTS40.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle31.Format = "N2";
+            this.CalculoValor_FGTS40.DefaultCellStyle = dataGridViewCellStyle31;
             this.CalculoValor_FGTS40.HeaderText = "Valor_FGTS_40%";
             this.CalculoValor_FGTS40.Name = "CalculoValor_FGTS40";
             this.CalculoValor_FGTS40.ReadOnly = true;
@@ -252,9 +252,9 @@
             // CalculoValor_Total
             // 
             this.CalculoValor_Total.DataPropertyName = "Valor_Total";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N2";
-            this.CalculoValor_Total.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle32.Format = "N2";
+            this.CalculoValor_Total.DefaultCellStyle = dataGridViewCellStyle32;
             this.CalculoValor_Total.HeaderText = "Valor_Total";
             this.CalculoValor_Total.Name = "CalculoValor_Total";
             this.CalculoValor_Total.ReadOnly = true;
@@ -271,9 +271,9 @@
             // ComplementoValor
             // 
             this.ComplementoValor.DataPropertyName = "Valor";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N2";
-            this.ComplementoValor.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle33.Format = "N2";
+            this.ComplementoValor.DefaultCellStyle = dataGridViewCellStyle33;
             this.ComplementoValor.HeaderText = "Valor";
             this.ComplementoValor.Name = "ComplementoValor";
             this.ComplementoValor.ReadOnly = true;
@@ -291,7 +291,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(13, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 1;
@@ -300,7 +300,7 @@
             // BtnExcluir
             // 
             this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.Location = new System.Drawing.Point(713, 408);
+            this.BtnExcluir.Location = new System.Drawing.Point(714, 459);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 2;
@@ -311,7 +311,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 418);
+            this.label2.Location = new System.Drawing.Point(13, 469);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 13);
             this.label2.TabIndex = 3;
@@ -321,18 +321,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 440);
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(802, 493);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvListarCalculos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmListaCalculo";
+            this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Calculo";
             this.Load += new System.EventHandler(this.FrmListaCalculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarCalculos)).EndInit();

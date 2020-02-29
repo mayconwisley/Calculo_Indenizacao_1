@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CalculoIndenizacao
 {
-    public partial class FrmCalculoEstabilidade : Form
+    public partial class FrmCalculoEstabilidade : MetroFramework.Forms.MetroForm
     {
         public FrmCalculoEstabilidade()
         {

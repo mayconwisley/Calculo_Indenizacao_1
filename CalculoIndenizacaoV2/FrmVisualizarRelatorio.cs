@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CalculoIndenizacao
 {
-    public partial class FrmVisualizarRelatorio : Form
+    public partial class FrmVisualizarRelatorio : MetroFramework.Forms.MetroForm
     {
         ReportDataSource reportDataSource;
         Calculo calculo;

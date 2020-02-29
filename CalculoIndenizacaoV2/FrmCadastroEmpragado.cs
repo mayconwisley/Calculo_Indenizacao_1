@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace CalculoIndenizacao
 {
-    public partial class FrmCadastroEmpragado : Form
+    public partial class FrmCadastroEmpragado : MetroFramework.Forms.MetroForm
     {
         public FrmCadastroEmpragado()
         {

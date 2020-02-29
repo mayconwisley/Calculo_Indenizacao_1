@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.TxtNome = new System.Windows.Forms.TextBox();
@@ -43,11 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtDiasBase = new System.Windows.Forms.TextBox();
             this.dgvListaEmpregado = new System.Windows.Forms.DataGridView();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.BtnAlterar = new System.Windows.Forms.Button();
-            this.BtnExcluir = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.IdEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatriculaEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,13 +50,18 @@
             this.DemissaoEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MediaEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BaseEmpregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.BtnAlterar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpregado)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Location = new System.Drawing.Point(18, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -70,7 +70,7 @@
             // txtMatricula
             // 
             this.txtMatricula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMatricula.Location = new System.Drawing.Point(15, 26);
+            this.txtMatricula.Location = new System.Drawing.Point(21, 94);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(76, 20);
             this.txtMatricula.TabIndex = 1;
@@ -78,7 +78,7 @@
             // TxtNome
             // 
             this.TxtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNome.Location = new System.Drawing.Point(97, 26);
+            this.TxtNome.Location = new System.Drawing.Point(103, 94);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(304, 20);
             this.TxtNome.TabIndex = 2;
@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 10);
+            this.label2.Location = new System.Drawing.Point(100, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
@@ -95,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
+            this.label3.Location = new System.Drawing.Point(18, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             // MktAdmissao
             // 
-            this.MktAdmissao.Location = new System.Drawing.Point(15, 79);
+            this.MktAdmissao.Location = new System.Drawing.Point(21, 147);
             this.MktAdmissao.Mask = "00/00/0000";
             this.MktAdmissao.Name = "MktAdmissao";
             this.MktAdmissao.Size = new System.Drawing.Size(76, 20);
@@ -113,7 +113,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 63);
+            this.label4.Location = new System.Drawing.Point(100, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 4;
@@ -121,7 +121,7 @@
             // 
             // MktDemissao
             // 
-            this.MktDemissao.Location = new System.Drawing.Point(97, 79);
+            this.MktDemissao.Location = new System.Drawing.Point(103, 147);
             this.MktDemissao.Mask = "00/00/0000";
             this.MktDemissao.Name = "MktDemissao";
             this.MktDemissao.Size = new System.Drawing.Size(76, 20);
@@ -131,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 63);
+            this.label5.Location = new System.Drawing.Point(190, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 6;
@@ -140,7 +140,7 @@
             // TxtMedia
             // 
             this.TxtMedia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtMedia.Location = new System.Drawing.Point(187, 79);
+            this.TxtMedia.Location = new System.Drawing.Point(193, 147);
             this.TxtMedia.Name = "TxtMedia";
             this.TxtMedia.Size = new System.Drawing.Size(84, 20);
             this.TxtMedia.TabIndex = 5;
@@ -153,7 +153,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(274, 63);
+            this.label6.Location = new System.Drawing.Point(280, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 8;
@@ -162,7 +162,7 @@
             // TxtDiasBase
             // 
             this.TxtDiasBase.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtDiasBase.Location = new System.Drawing.Point(277, 79);
+            this.TxtDiasBase.Location = new System.Drawing.Point(283, 147);
             this.TxtDiasBase.Name = "TxtDiasBase";
             this.TxtDiasBase.Size = new System.Drawing.Size(52, 20);
             this.TxtDiasBase.TabIndex = 6;
@@ -184,7 +184,7 @@
             this.DemissaoEmpregado,
             this.MediaEmpregado,
             this.BaseEmpregado});
-            this.dgvListaEmpregado.Location = new System.Drawing.Point(12, 130);
+            this.dgvListaEmpregado.Location = new System.Drawing.Point(18, 198);
             this.dgvListaEmpregado.MultiSelect = false;
             this.dgvListaEmpregado.Name = "dgvListaEmpregado";
             this.dgvListaEmpregado.ReadOnly = true;
@@ -192,56 +192,6 @@
             this.dgvListaEmpregado.Size = new System.Drawing.Size(470, 174);
             this.dgvListaEmpregado.TabIndex = 10;
             this.dgvListaEmpregado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpregado_CellDoubleClick);
-            // 
-            // btnGravar
-            // 
-            this.btnGravar.Location = new System.Drawing.Point(407, 13);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(75, 23);
-            this.btnGravar.TabIndex = 7;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = true;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
-            // 
-            // BtnAlterar
-            // 
-            this.BtnAlterar.Enabled = false;
-            this.BtnAlterar.Location = new System.Drawing.Point(407, 42);
-            this.BtnAlterar.Name = "BtnAlterar";
-            this.BtnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.BtnAlterar.TabIndex = 8;
-            this.BtnAlterar.Text = "Alterar";
-            this.BtnAlterar.UseVisualStyleBackColor = true;
-            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
-            // 
-            // BtnExcluir
-            // 
-            this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.Location = new System.Drawing.Point(407, 71);
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.BtnExcluir.TabIndex = 9;
-            this.BtnExcluir.Text = "Excluir";
-            this.BtnExcluir.UseVisualStyleBackColor = true;
-            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 114);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Lista de Empregado";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 309);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(231, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Dois cliques sobre o item para excluir ou alterar.";
             // 
             // IdEmpregado
             // 
@@ -282,10 +232,10 @@
             // MediaEmpregado
             // 
             this.MediaEmpregado.DataPropertyName = "Media";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.MediaEmpregado.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.MediaEmpregado.DefaultCellStyle = dataGridViewCellStyle7;
             this.MediaEmpregado.HeaderText = "Media";
             this.MediaEmpregado.Name = "MediaEmpregado";
             this.MediaEmpregado.ReadOnly = true;
@@ -293,17 +243,67 @@
             // BaseEmpregado
             // 
             this.BaseEmpregado.DataPropertyName = "Base";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.BaseEmpregado.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.BaseEmpregado.DefaultCellStyle = dataGridViewCellStyle8;
             this.BaseEmpregado.HeaderText = "Dias_Base";
             this.BaseEmpregado.Name = "BaseEmpregado";
             this.BaseEmpregado.ReadOnly = true;
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.Location = new System.Drawing.Point(413, 81);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(75, 23);
+            this.btnGravar.TabIndex = 7;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            // 
+            // BtnAlterar
+            // 
+            this.BtnAlterar.Enabled = false;
+            this.BtnAlterar.Location = new System.Drawing.Point(413, 110);
+            this.BtnAlterar.Name = "BtnAlterar";
+            this.BtnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.BtnAlterar.TabIndex = 8;
+            this.BtnAlterar.Text = "Alterar";
+            this.BtnAlterar.UseVisualStyleBackColor = true;
+            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
+            // 
+            // BtnExcluir
+            // 
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.Location = new System.Drawing.Point(413, 139);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluir.TabIndex = 9;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Lista de Empregado";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 377);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(231, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Dois cliques sobre o item para excluir ou alterar.";
             // 
             // FrmCadastroEmpragado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 331);
+            this.ClientSize = new System.Drawing.Size(505, 395);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnExcluir);
@@ -322,12 +322,12 @@
             this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCadastroEmpragado";
+            this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Empragado";
             this.Load += new System.EventHandler(this.FrmCadastroEmpragado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpregado)).EndInit();

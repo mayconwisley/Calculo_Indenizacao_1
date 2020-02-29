@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CalculoIndenizacao
 {
-    public partial class FrmCadastroComplemento : Form
+    public partial class FrmCadastroComplemento : MetroFramework.Forms.MetroForm
     {
         public FrmCadastroComplemento()
         {

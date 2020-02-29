@@ -4,7 +4,7 @@ using System;
 using System.Windows.Forms;
 namespace CalculoIndenizacao
 {
-    public partial class FrmListaCalculo : Form
+    public partial class FrmListaCalculo : MetroFramework.Forms.MetroForm
     {
         public FrmListaCalculo()
         {
