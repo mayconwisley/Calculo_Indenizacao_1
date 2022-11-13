@@ -120,7 +120,6 @@
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.Resizable = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Calculo Indenização";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.ResumeLayout(false);
