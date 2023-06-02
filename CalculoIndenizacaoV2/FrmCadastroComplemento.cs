@@ -78,15 +78,17 @@ namespace CalculoIndenizacao
                 if (cbTipo.Checked)
                 {
                     complementoObjeto.Tipo = true;
-                    valor = valor * (-1);
+                    valor *= (-1);
                 }
                 else
                 {
                     complementoObjeto.Tipo = false;
                 }
                 complementoObjeto.Valor = valor;
-                complementoObjeto.Empregado = new EmpregadoObjeto();
-                complementoObjeto.Empregado.Id = empregadoId;
+                complementoObjeto.Empregado = new EmpregadoObjeto
+                {
+                    Id = empregadoId
+                };
 
                 switch (opc)
                 {
@@ -122,17 +124,17 @@ namespace CalculoIndenizacao
             ListarEmpregado();
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
+        private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             Manipular('A');
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void BtnExcluir_Click(object sender, EventArgs e)
         {
             Manipular('E');
         }
 
-        private void dgvListaLancamento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvListaLancamento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -159,21 +161,21 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void txtValor_TextChanged(object sender, EventArgs e)
+        private void TxtValor_TextChanged(object sender, EventArgs e)
         {
             validar = new Validar();
             txtValor.Text = validar.ValidarValor(txtValor.Text);
             txtValor.Select(txtValor.Text.Length, 0);
         }
 
-        private void txtValor_Leave(object sender, EventArgs e)
+        private void TxtValor_Leave(object sender, EventArgs e)
         {
             validar = new Validar();
             txtValor.Text = validar.Zero(txtValor.Text);
             txtValor.Text = validar.Formatar(txtValor.Text);
         }
 
-        private void txtValor_Enter(object sender, EventArgs e)
+        private void TxtValor_Enter(object sender, EventArgs e)
         {
             if (txtValor.Text == "0,00")
             {
@@ -181,7 +183,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void cbxEmpregado_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxEmpregado_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {

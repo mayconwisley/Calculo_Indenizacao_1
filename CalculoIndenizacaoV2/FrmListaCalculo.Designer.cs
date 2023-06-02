@@ -100,7 +100,7 @@
             this.dgvListarCalculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListarCalculos.Size = new System.Drawing.Size(776, 377);
             this.dgvListarCalculos.TabIndex = 0;
-            this.dgvListarCalculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarCalculos_CellDoubleClick);
+            this.dgvListarCalculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListarCalculos_CellDoubleClick);
             // 
             // EmpregadoMatricula
             // 

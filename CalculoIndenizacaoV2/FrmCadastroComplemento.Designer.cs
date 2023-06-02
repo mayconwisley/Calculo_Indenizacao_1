@@ -65,7 +65,7 @@
             this.cbxEmpregado.Size = new System.Drawing.Size(462, 21);
             this.cbxEmpregado.TabIndex = 2;
             this.cbxEmpregado.ValueMember = "Id";
-            this.cbxEmpregado.SelectedIndexChanged += new System.EventHandler(this.cbxEmpregado_SelectedIndexChanged);
+            this.cbxEmpregado.SelectedIndexChanged += new System.EventHandler(this.CbxEmpregado_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -123,9 +123,9 @@
             this.txtValor.TabIndex = 5;
             this.txtValor.Text = "0,00";
             this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
-            this.txtValor.Enter += new System.EventHandler(this.txtValor_Enter);
-            this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
+            this.txtValor.TextChanged += new System.EventHandler(this.TxtValor_TextChanged);
+            this.txtValor.Enter += new System.EventHandler(this.TxtValor_Enter);
+            this.txtValor.Leave += new System.EventHandler(this.TxtValor_Leave);
             // 
             // label5
             // 
@@ -165,7 +165,7 @@
             this.dgvListaLancamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaLancamento.Size = new System.Drawing.Size(460, 132);
             this.dgvListaLancamento.TabIndex = 9;
-            this.dgvListaLancamento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaLancamento_CellDoubleClick);
+            this.dgvListaLancamento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaLancamento_CellDoubleClick);
             // 
             // IdComplemento
             // 
@@ -224,7 +224,7 @@
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnAdicionar
             // 
@@ -234,7 +234,7 @@
             this.btnAdicionar.TabIndex = 7;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // cbTipo
             // 

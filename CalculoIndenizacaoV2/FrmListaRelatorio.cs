@@ -54,7 +54,7 @@ namespace CalculoIndenizacao
 
         }
 
-        private void cbxEmpregado_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxEmpregado_SelectedIndexChanged(object sender, EventArgs e)
         {
             empregado = new Empregado();
             try
@@ -70,7 +70,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void btnGerar_Click(object sender, EventArgs e)
+        private void BtnGerar_Click(object sender, EventArgs e)
         {
             relatorioDemonstrativo = new Relatorios.RelatorioDemonstrativo();
             try
@@ -97,7 +97,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void cbxValorTotal_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxValorTotal_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {

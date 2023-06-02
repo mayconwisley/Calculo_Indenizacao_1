@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Negocio.Calculo;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Negocio.Calculo;
 
 namespace CalculoIndenizacao.Relatorios
 {
@@ -13,7 +8,7 @@ namespace CalculoIndenizacao.Relatorios
         Calculo calculo;
         Relatorio relatorio;
 
-        
+
         public void GerarRelatorio(int empregadoId, int calculoId)
         {
             calculo = new Calculo();

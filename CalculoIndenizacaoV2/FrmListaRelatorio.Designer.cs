@@ -53,7 +53,7 @@
             this.cbxEmpregado.Size = new System.Drawing.Size(294, 21);
             this.cbxEmpregado.TabIndex = 1;
             this.cbxEmpregado.ValueMember = "Id";
-            this.cbxEmpregado.SelectedIndexChanged += new System.EventHandler(this.cbxEmpregado_SelectedIndexChanged);
+            this.cbxEmpregado.SelectedIndexChanged += new System.EventHandler(this.CbxEmpregado_SelectedIndexChanged);
             // 
             // btnGerar
             // 
@@ -63,7 +63,7 @@
             this.btnGerar.TabIndex = 4;
             this.btnGerar.Text = "Gerar";
             this.btnGerar.UseVisualStyleBackColor = true;
-            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
+            this.btnGerar.Click += new System.EventHandler(this.BtnGerar_Click);
             // 
             // cbxValorTotal
             // 
@@ -76,7 +76,7 @@
             this.cbxValorTotal.Size = new System.Drawing.Size(129, 21);
             this.cbxValorTotal.TabIndex = 5;
             this.cbxValorTotal.ValueMember = "Id";
-            this.cbxValorTotal.SelectedIndexChanged += new System.EventHandler(this.cbxValorTotal_SelectedIndexChanged);
+            this.cbxValorTotal.SelectedIndexChanged += new System.EventHandler(this.CbxValorTotal_SelectedIndexChanged);
             // 
             // label2
             // 

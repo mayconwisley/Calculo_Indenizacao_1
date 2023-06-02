@@ -57,7 +57,7 @@ namespace CalculoIndenizacao
             Listar();
         }
 
-        private void dgvListarCalculos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvListarCalculos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

@@ -88,7 +88,7 @@ namespace CalculoIndenizacao
             ListarEmpregados();
         }
 
-        private void btnGravar_Click(object sender, EventArgs e)
+        private void BtnGravar_Click(object sender, EventArgs e)
         {
             Manipular('G');
         }
@@ -103,7 +103,7 @@ namespace CalculoIndenizacao
             Manipular('E');
         }
 
-        private void dgvListaEmpregado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvListaEmpregado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

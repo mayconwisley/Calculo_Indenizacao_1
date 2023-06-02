@@ -191,7 +191,7 @@
             this.dgvListaEmpregado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaEmpregado.Size = new System.Drawing.Size(470, 174);
             this.dgvListaEmpregado.TabIndex = 10;
-            this.dgvListaEmpregado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpregado_CellDoubleClick);
+            this.dgvListaEmpregado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaEmpregado_CellDoubleClick);
             // 
             // IdEmpregado
             // 
@@ -257,7 +257,7 @@
             this.btnGravar.TabIndex = 7;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
             // BtnAlterar
             // 

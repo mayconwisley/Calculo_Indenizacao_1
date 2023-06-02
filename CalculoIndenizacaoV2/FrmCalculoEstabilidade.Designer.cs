@@ -88,7 +88,7 @@
             this.cbxEmpregado.Size = new System.Drawing.Size(359, 21);
             this.cbxEmpregado.TabIndex = 1;
             this.cbxEmpregado.ValueMember = "Id";
-            this.cbxEmpregado.SelectedIndexChanged += new System.EventHandler(this.cbxEmpregado_SelectedIndexChanged);
+            this.cbxEmpregado.SelectedIndexChanged += new System.EventHandler(this.CbxEmpregado_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -167,7 +167,7 @@
             this.mktDataEstabilidade.Size = new System.Drawing.Size(80, 20);
             this.mktDataEstabilidade.TabIndex = 3;
             this.mktDataEstabilidade.ValidatingType = typeof(System.DateTime);
-            this.mktDataEstabilidade.Leave += new System.EventHandler(this.mktDataEstabilidade_Leave);
+            this.mktDataEstabilidade.Leave += new System.EventHandler(this.MktDataEstabilidade_Leave);
             // 
             // label4
             // 
@@ -286,7 +286,7 @@
             this.btnCalcular.TabIndex = 4;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.btnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
             // 
             // btnGravar
             // 
@@ -297,7 +297,7 @@
             this.btnGravar.TabIndex = 5;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
             // btnImprimir
             // 
@@ -308,7 +308,7 @@
             this.btnImprimir.TabIndex = 6;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            this.btnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // FrmCalculoEstabilidade
             // 

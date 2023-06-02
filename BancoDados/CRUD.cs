@@ -6,7 +6,7 @@ namespace BancoDados
 {
     public class CRUD : Conexao
     {
-        SQLiteParameterCollection liteParameterCollection = new SQLiteCommand().Parameters;
+        readonly SQLiteParameterCollection liteParameterCollection = new SQLiteCommand().Parameters;
         SQLiteCommand liteCommand = null;
 
         public void LimparParametro()

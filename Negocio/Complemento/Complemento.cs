@@ -68,7 +68,7 @@ namespace Negocio.Complemento
             sqlBuilder.Append("SELECT Id, Descricao, Valor, Tipo, Id_Empregado ");
             sqlBuilder.Append("FROM Complemento ");
             sqlBuilder.Append("WHERE Id_Empregado = @Id_Empregado");
-            
+
             SQL = sqlBuilder.ToString();
 
             try

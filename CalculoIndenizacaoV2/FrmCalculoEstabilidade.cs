@@ -125,8 +125,8 @@ namespace CalculoIndenizacao
             try
             {
                 valorIndenizacao = CalculoBase.Indenizacao(valorMedia, diasBase, diasEstabilidade.Days);
-                valorDecimoTerceiroSalario = CalculoBase.DecimoTerceiro(valorMedia, diasBase, diasEstabilidade.Days);
-                valorFerias = CalculoBase.Ferias(valorMedia, diasBase, diasEstabilidade.Days);
+                valorDecimoTerceiroSalario = CalculoBase.DecimoTerceiro(valorMedia, diasEstabilidade.Days);
+                valorFerias = CalculoBase.Ferias(valorMedia, diasEstabilidade.Days);
                 valorTercoFerias = CalculoBase.TercoFerias(valorFerias);
 
                 if (CbCalcFGTS8.Checked)
@@ -174,8 +174,10 @@ namespace CalculoIndenizacao
             try
             {
                 empregadoObjeto.Id = idEmpregado;
-                calculoObjeto.Empregado = new EmpregadoObjeto();
-                calculoObjeto.Empregado.Id = idEmpregado;
+                calculoObjeto.Empregado = new EmpregadoObjeto
+                {
+                    Id = idEmpregado
+                };
 
 
                 if (!calculo.Existe(calculoObjeto))
@@ -221,8 +223,10 @@ namespace CalculoIndenizacao
 
                 calculoObjeto.ValorTotal = valorTotal;
                 calculoObjeto.Complemento = strComplemento;
-                calculoObjeto.Empregado = new EmpregadoObjeto();
-                calculoObjeto.Empregado.Id = empregadoId;
+                calculoObjeto.Empregado = new EmpregadoObjeto
+                {
+                    Id = empregadoId
+                };
 
                 switch (opc)
                 {
@@ -253,14 +257,14 @@ namespace CalculoIndenizacao
             lblInfo.Text = "Info";
         }
 
-        private void btnCalcular_Click(object sender, EventArgs e)
+        private void BtnCalcular_Click(object sender, EventArgs e)
         {
             empregadoId = int.Parse(cbxEmpregado.SelectedValue.ToString());
             Existe(empregadoId);
             Calcular();
         }
 
-        private void btnGravar_Click(object sender, EventArgs e)
+        private void BtnGravar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Tem certeza que deseja gravar os dados calculados?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
@@ -289,7 +293,7 @@ namespace CalculoIndenizacao
             Calcular();
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void BtnImprimir_Click(object sender, EventArgs e)
         {
             relatorioDemonstrativo = new Relatorios.RelatorioDemonstrativo();
             try
@@ -316,7 +320,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void cbxEmpregado_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxEmpregado_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -331,7 +335,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void mktDataEstabilidade_Leave(object sender, EventArgs e)
+        private void MktDataEstabilidade_Leave(object sender, EventArgs e)
         {
             try
             {

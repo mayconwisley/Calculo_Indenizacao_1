@@ -12,8 +12,8 @@ namespace CalculoIndenizacao
         ReportDataSource reportDataSource;
         Calculo calculo;
         Relatorio relatorio;
-        int idEmpregado;
-        int idCalculo = 0;
+        readonly int idEmpregado;
+        readonly int idCalculo = 0;
         public FrmVisualizarRelatorio()
         {
             InitializeComponent();
@@ -112,7 +112,7 @@ namespace CalculoIndenizacao
             {
                 if (idCalculo != 0)
                 {
-                    GerarRelatorio(idEmpregado); 
+                    GerarRelatorio(idEmpregado);
                 }
                 else
                 {

@@ -5,8 +5,6 @@ namespace CalculoIndenizacao
 {
     public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
-
-
         static FrmPrincipal _instance;
 
         public static FrmPrincipal Instance
@@ -21,7 +19,6 @@ namespace CalculoIndenizacao
                 return _instance;
             }
         }
-
 
         public MetroFramework.Controls.MetroPanel MetroContainer
         {
@@ -41,7 +38,7 @@ namespace CalculoIndenizacao
         FrmListaCalculo listaCalculo;
         bool abrir = true;
 
-        private void menuCadastroEmpregado_Click(object sender, EventArgs e)
+        private void MenuCadastroEmpregado_Click(object sender, EventArgs e)
         {
             cadastroEmpragado = new FrmCadastroEmpragado();
             foreach (Form item in Application.OpenForms)
@@ -58,7 +55,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void menuCadastroComplemento_Click(object sender, EventArgs e)
+        private void MenuCadastroComplemento_Click(object sender, EventArgs e)
         {
             cadastroComplemento = new FrmCadastroComplemento();
             foreach (Form item in Application.OpenForms)
@@ -75,7 +72,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void calcularToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CalcularToolStripMenuItem_Click(object sender, EventArgs e)
         {
             calculoEstabilidade = new FrmCalculoEstabilidade();
             foreach (Form item in Application.OpenForms)
@@ -92,7 +89,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void menuRelatorioListarDemonstrativo_Click(object sender, EventArgs e)
+        private void MenuRelatorioListarDemonstrativo_Click(object sender, EventArgs e)
         {
             listaRelatorio = new FrmListaRelatorio();
             foreach (Form item in Application.OpenForms)
@@ -109,7 +106,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void listaDeCalculosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ListaDeCalculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listaCalculo = new FrmListaCalculo();
             foreach (Form item in Application.OpenForms)
@@ -126,7 +123,7 @@ namespace CalculoIndenizacao
             }
         }
 
-        private void menuSair_Click(object sender, EventArgs e)
+        private void MenuSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -135,8 +132,10 @@ namespace CalculoIndenizacao
         {
             if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UCCadastro"))
             {
-                UCCadastro uCCadastro = new UCCadastro();
-                uCCadastro.Dock = DockStyle.Fill;
+                UCCadastro uCCadastro = new UCCadastro
+                {
+                    Dock = DockStyle.Fill
+                };
                 FrmPrincipal.Instance.MetroContainer.Controls.Add(uCCadastro);
             }
             FrmPrincipal.Instance.MetroContainer.Controls["UCCadastro"].BringToFront();
@@ -146,8 +145,10 @@ namespace CalculoIndenizacao
         {
             if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UcCalculo"))
             {
-                UcCalculo ucCalculo = new UcCalculo();
-                ucCalculo.Dock = DockStyle.Fill;
+                UcCalculo ucCalculo = new UcCalculo
+                {
+                    Dock = DockStyle.Fill
+                };
                 FrmPrincipal.Instance.MetroContainer.Controls.Add(ucCalculo);
             }
             FrmPrincipal.Instance.MetroContainer.Controls["UcCalculo"].BringToFront();
@@ -157,8 +158,10 @@ namespace CalculoIndenizacao
         {
             if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UCRelatorio"))
             {
-                UCRelatorio uCRelatorio = new UCRelatorio();
-                uCRelatorio.Dock = DockStyle.Fill;
+                UCRelatorio uCRelatorio = new UCRelatorio
+                {
+                    Dock = DockStyle.Fill
+                };
                 FrmPrincipal.Instance.MetroContainer.Controls.Add(uCRelatorio);
             }
             FrmPrincipal.Instance.MetroContainer.Controls["UCRelatorio"].BringToFront();
