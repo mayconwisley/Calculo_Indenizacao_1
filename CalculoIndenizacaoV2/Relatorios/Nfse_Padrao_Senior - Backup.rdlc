@@ -1,0 +1,4364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <Description>Recibo Provisório de Serviço - SDE</Description>
+  <Author>Senior</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="NfseDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>1b812181-e422-4080-b60e-d91f45bc16d4</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Rps">
+      <Query>
+        <DataSourceName>NfseDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Serie">
+          <DataField>Serie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Numero">
+          <DataField>Numero</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="DataEmissao">
+          <DataField>DataEmissao</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorNome">
+          <DataField>PrestadorNome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorInscricaoMunicipal">
+          <DataField>PrestadorInscricaoMunicipal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorCnpj">
+          <DataField>PrestadorCnpj</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorEndereco">
+          <DataField>PrestadorEndereco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorMunicipio">
+          <DataField>PrestadorMunicipio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorSiglaUf">
+          <DataField>PrestadorSiglaUf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorCep">
+          <DataField>PrestadorCep</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorBairro">
+          <DataField>PrestadorBairro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorNome">
+          <DataField>TomadorNome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorCnpjCpf">
+          <DataField>TomadorCnpjCpf</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="TomadorEndereco">
+          <DataField>TomadorEndereco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorMunicipio">
+          <DataField>TomadorMunicipio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorSiglaUf">
+          <DataField>TomadorSiglaUf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorCep">
+          <DataField>TomadorCep</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TomadorBairro">
+          <DataField>TomadorBairro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorEmail">
+          <DataField>TomadorEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoVerificacao">
+          <DataField>CodigoVerificacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DescricaoServico">
+          <DataField>DescricaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalServicos">
+          <DataField>ValorTotalServicos</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Pis">
+          <DataField>Pis</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Cofins">
+          <DataField>Cofins</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Inss">
+          <DataField>Inss</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Ir">
+          <DataField>Ir</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Csll">
+          <DataField>Csll</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotalDeducoes">
+          <DataField>TotalDeducoes</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Aliquota">
+          <DataField>Aliquota</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Iss">
+          <DataField>Iss</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorDesconto">
+          <DataField>ValorDesconto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalRps">
+          <DataField>ValorTotalRps</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="InformacoesAdicionais">
+          <DataField>InformacoesAdicionais</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorNumero">
+          <DataField>PrestadorNumero</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrestadorComplemento">
+          <DataField>PrestadorComplemento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorNumero">
+          <DataField>TomadorNumero</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorComplemento">
+          <DataField>TomadorComplemento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorTipoCpfCnpj">
+          <DataField>TomadorTipoCpfCnpj</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BaseCalculo">
+          <DataField>BaseCalculo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NumeroNfse">
+          <DataField>NumeroNfse</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCidadeServico">
+          <DataField>CodigoCidadeServico</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="UFCidadeServico">
+          <DataField>UFCidadeServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomeCidadeServico">
+          <DataField>NomeCidadeServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IssRetido">
+          <DataField>IssRetido</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NaturezaOperacao">
+          <DataField>NaturezaOperacao</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemListaServico">
+          <DataField>ItemListaServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DescontoIncondicionado">
+          <DataField>DescontoIncondicionado</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TomadorInscricaoMunicipal">
+          <DataField>TomadorInscricaoMunicipal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RegimeEspecialTributacao">
+          <DataField>RegimeEspecialTributacao</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="OptanteSimplesNacional">
+          <DataField>OptanteSimplesNacional</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IncentivadorCultural">
+          <DataField>IncentivadorCultural</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ValorIssRetido">
+          <DataField>ValorIssRetido</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="OutrasRetencoes">
+          <DataField>OutrasRetencoes</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCnae">
+          <DataField>CodigoCnae</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="CodigoTributacaoMunicipio">
+          <DataField>CodigoTributacaoMunicipio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Situacao">
+          <DataField>Situacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InformacoesPrefeitura">
+          <DataField>InformacoesPrefeitura</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QrCode">
+          <DataField>QrCode</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCidadeServicoSiafi">
+          <DataField>CodigoCidadeServicoSiafi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DataCarimboAutorizacao">
+          <DataField>DataCarimboAutorizacao</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DataAutorizacao">
+          <DataField>DataAutorizacao</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CodigoIbge">
+          <DataField>CodigoIbge</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MunicipioNfse">
+          <DataField>MunicipioNfse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SiglaMunNfse">
+          <DataField>SiglaMunNfse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IntermediarioServicoInscMunicipal">
+          <DataField>IntermediarioServicoInscMunicipal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IntermediarioServicoRazaoSocial">
+          <DataField>IntermediarioServicoRazaoSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IntermediarioServicoCpfCnpj">
+          <DataField>IntermediarioServicoCpfCnpj</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IntermediarioServicoTipoPessoa">
+          <DataField>IntermediarioServicoTipoPessoa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>NfseDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\leonardo.jesus\Documents\sde-fontes\DataAccess\Domain\Model\DocumentoAuxiliar\NfseDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Rps</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="InfSenior">
+      <Query>
+        <DataSourceName>NfseDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="UfPrestador">
+          <DataField>UfPrestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BairroPrestador">
+          <DataField>BairroPrestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomePrestador">
+          <DataField>NomePrestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CepPrestador">
+          <DataField>CepPrestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroEnderecoPrestador">
+          <DataField>NumeroEnderecoPrestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmailPrestador">
+          <DataField>EmailPrestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LogradouroPestador">
+          <DataField>LogradouroPestador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UfAtividade">
+          <DataField>UfAtividade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomeEmbarcacao">
+          <DataField>NomeEmbarcacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BandeiraEmbarcacao">
+          <DataField>BandeiraEmbarcacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CnpjAtividade">
+          <DataField>CnpjAtividade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CpfAtividade">
+          <DataField>CpfAtividade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomePorto">
+          <DataField>NomePorto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomeObra">
+          <DataField>NomeObra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomeRazaoSocial">
+          <DataField>NomeRazaoSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DataEntrada">
+          <DataField>DataEntrada</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DataSaida">
+          <DataField>DataSaida</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EnderecoNumero">
+          <DataField>EnderecoNumero</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EnderecoComplemento">
+          <DataField>EnderecoComplemento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeducaoSubEmpreitada">
+          <DataField>DeducaoSubEmpreitada</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="EnderecoLogradouro">
+          <DataField>EnderecoLogradouro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EnderecoBairro">
+          <DataField>EnderecoBairro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DeducaoMaterial">
+          <DataField>DeducaoMaterial</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Proprietario">
+          <DataField>Proprietario</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CodigoMunicipio">
+          <DataField>CodigoMunicipio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EnderecoCep">
+          <DataField>EnderecoCep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SitTribISSQN">
+          <DataField>SitTribISSQN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TomadorIE">
+          <DataField>TomadorIE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalRecebido">
+          <DataField>ValorTotalRecebido</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Competencia">
+          <DataField>Competencia</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TipoLogradouroPrestacaoServico">
+          <DataField>TipoLogradouroPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LogradouroPrestacaoServico">
+          <DataField>LogradouroPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroEnderecoPrestacaoServico">
+          <DataField>NumeroEnderecoPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ComplementoPrestacaoServico">
+          <DataField>ComplementoPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BairroPrestacaoServico">
+          <DataField>BairroPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomeMunicipioPrestacaoServico">
+          <DataField>NomeMunicipioPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SiglaUfPrestacaoServico">
+          <DataField>SiglaUfPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CepPrestacaoServico">
+          <DataField>CepPrestacaoServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>NfseDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\leonardo.jesus\Documents\sde-fontes\DataAccess\Domain\Model\DocumentoAuxiliar\NfseDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>InfSenior</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="ItemInfSenior">
+      <Query>
+        <DataSourceName>NfseDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Observacao">
+          <DataField>Observacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorBruto">
+          <DataField>ValorBruto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NomeItem">
+          <DataField>NomeItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorLiquido">
+          <DataField>ValorLiquido</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Quantidade">
+          <DataField>Quantidade</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CodigoItem">
+          <DataField>CodigoItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoTributacaoMunicipio">
+          <DataField>CodigoTributacaoMunicipio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemListaServico">
+          <DataField>ItemListaServico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnidadeMedida">
+          <DataField>UnidadeMedida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaIss">
+          <DataField>AliquotaIss</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorIss">
+          <DataField>ValorIss</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BaseInss">
+          <DataField>BaseInss</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaInss">
+          <DataField>AliquotaInss</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorInss">
+          <DataField>ValorInss</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BaseIr">
+          <DataField>BaseIr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaIr">
+          <DataField>AliquotaIr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorIr">
+          <DataField>ValorIr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BaseCofinsRetido">
+          <DataField>BaseCofinsRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaCofinsRetido">
+          <DataField>AliquotaCofinsRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorCofinsRetido">
+          <DataField>ValorCofinsRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BaseCsllRetido">
+          <DataField>BaseCsllRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaCsllRetido">
+          <DataField>AliquotaCsllRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorCsllRetido">
+          <DataField>ValorCsllRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BasePisRetido">
+          <DataField>BasePisRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaPisRetido">
+          <DataField>AliquotaPisRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorPisRetido">
+          <DataField>ValorPisRetido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BaseISS">
+          <DataField>BaseISS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AliquotaISS">
+          <DataField>AliquotaISS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorISS">
+          <DataField>ValorISS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Desconto">
+          <DataField>Desconto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>NfseDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\leonardo.jesus\Documents\sde-fontes\DataAccess\Domain\Model\DocumentoAuxiliar\NfseDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>ItemInfSenior</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="FaturaInfSenior">
+      <Query>
+        <DataSourceName>NfseDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Numero">
+          <DataField>Numero</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Vencimento">
+          <DataField>Vencimento</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Valor">
+          <DataField>Valor</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>NfseDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\leonardo.jesus\Documents\sde-fontes\DataAccess\Domain\Model\DocumentoAuxiliar\NfseDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>FaturaInfSenior</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="TributosInfSenior">
+      <Query>
+        <DataSourceName>NfseDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ValorCargaTributaria">
+          <DataField>ValorCargaTributaria</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PercentualCargaTributaria">
+          <DataField>PercentualCargaTributaria</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FonteCargaTributaria">
+          <DataField>FonteCargaTributaria</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DescricaoValorAproximadoTributos">
+          <DataField>DescricaoValorAproximadoTributos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>NfseDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\leonardo.jesus\Documents\sde-fontes\DataAccess\Domain\Model\DocumentoAuxiliar\NfseDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>TributosInfSenior</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Line Name="line19">
+            <Top>15.63925cm</Top>
+            <Left>1.32074cm</Left>
+            <Height>0cm</Height>
+            <Width>0cm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Rectangle Name="Rectangle3">
+            <ReportItems>
+              <Textbox Name="textbox3">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>="Prefeitura Municipal de " + First(Fields!MunicipioNfse.Value, "Rps") + " - " + First(Fields!SiglaMunNfse.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>14pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Left>0.01237cm</Left>
+                <Height>0.60258cm</Height>
+                <Width>19.60836cm</Width>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Rectangle Name="Rectangle7">
+                <ReportItems>
+                  <Textbox Name="textbox7">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>CÓDIGO VERIFICAÇÃO</Value>
+                            <Style>
+                              <FontStyle>Normal</FontStyle>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Normal</FontWeight>
+                              <TextDecoration>None</TextDecoration>
+                              <Color>#000000</Color>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>2.41176pt</Top>
+                    <Left>3.25pt</Left>
+                    <Height>0.37814cm</Height>
+                    <Width>4.02cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="DataEmissao2">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!CodigoVerificacao.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Language>pt-BR</Language>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>DataEmissao</rd:DefaultName>
+                    <Top>0.46322cm</Top>
+                    <Left>0.11862cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>5.47969cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>1.27272cm</Top>
+                <Left>8.84199cm</Left>
+                <Height>0.96553cm</Height>
+                <Width>5.73504cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle6">
+                <ReportItems>
+                  <Textbox Name="textbox6">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>DATA E HORA DA EMISSÃO</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>8pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>2.41176pt</Top>
+                    <Left>3.26219pt</Left>
+                    <Height>0.37814cm</Height>
+                    <Width>3.88123cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="DataEmissao">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Format(First(Fields!DataEmissao.Value, "Rps"), "dd/MM/yyyy HH:mm:ss")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Language>pt-BR</Language>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>DataEmissao</rd:DefaultName>
+                    <Top>0.46322cm</Top>
+                    <Left>0.11509cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>4.34872cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>1.27272cm</Top>
+                <Left>4.2147cm</Left>
+                <Height>0.96553cm</Height>
+                <Width>4.62729cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle33">
+                <ReportItems>
+                  <Textbox Name="DataEmissao4">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!CodigoIbge.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Language>pt-BR</Language>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>DataEmissao</rd:DefaultName>
+                    <Top>0.47028cm</Top>
+                    <Left>0.13746cm</Left>
+                    <Height>0.43889cm</Height>
+                    <Width>4.34872cm</Width>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.24177cm</Top>
+                <Left>4.2147cm</Left>
+                <Height>0.90917cm</Height>
+                <Width>4.62729cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle34">
+                <ReportItems>
+                  <Textbox Name="textbox10">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Nº RPS SUBSTITUIDO</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>8pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>2.41176pt</Top>
+                    <Left>4.33877pt</Left>
+                    <Height>0.37814cm</Height>
+                    <Width>2.99875cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="DataEmissao5">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!Numero.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Language>pt-BR</Language>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>DataEmissao</rd:DefaultName>
+                    <Top>0.46322cm</Top>
+                    <Left>0.29375cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>3.85964cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                  <Rectangle Name="Rectangle35">
+                    <ReportItems>
+                      <Textbox Name="textbox11">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value EvaluationMode="Constant">SIAFI</Value>
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                  <FontSize>8pt</FontSize>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <Top>2.6428pt</Top>
+                        <Left>4.33867pt</Left>
+                        <Height>0.37705cm</Height>
+                        <Width>2.115cm</Width>
+                        <Style />
+                      </Textbox>
+                      <Textbox Name="DataEmissao6">
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=First(Fields!CodigoCidadeServicoSiafi.Value, "Rps")</Value>
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Language>pt-BR</Language>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Right</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>DataEmissao</rd:DefaultName>
+                        <Top>0.47028cm</Top>
+                        <Left>0.29376cm</Left>
+                        <Height>0.4cm</Height>
+                        <Width>3.85964cm</Width>
+                        <ZIndex>1</ZIndex>
+                        <Style />
+                      </Textbox>
+                    </ReportItems>
+                    <KeepTogether>true</KeepTogether>
+                    <Top>0.96905cm</Top>
+                    <Height>0.90917cm</Height>
+                    <Width>4.2147cm</Width>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                        <Width>0.3pt</Width>
+                      </Border>
+                    </Style>
+                  </Rectangle>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>1.27272cm</Top>
+                <Height>1.87823cm</Height>
+                <Width>4.2147cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle5">
+                <ReportItems>
+                  <Textbox Name="Numero">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!NumeroNfse.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Numero</rd:DefaultName>
+                    <Top>0.46322cm</Top>
+                    <Left>0.09333cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>4.99626cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="textbox4">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>NÚMERO NFS-e</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>8pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>textbox4</rd:DefaultName>
+                    <Top>2.41176pt</Top>
+                    <Left>3.02258pt</Left>
+                    <Height>0.37814cm</Height>
+                    <Width>2.75cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>1.27272cm</Top>
+                <Left>14.57703cm</Left>
+                <Height>0.96553cm</Height>
+                <Width>5.08959cm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle32">
+                <ReportItems>
+                  <Textbox Name="DataEmissao3">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!NomeCidadeServico.Value, "Rps") + " - " + First(Fields!UFCidadeServico.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Language>pt-BR</Language>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Right</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>DataEmissao</rd:DefaultName>
+                    <Top>0.47028cm</Top>
+                    <Left>0.1035cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>10.67524cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="textbox8">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>SERVIÇO PRESTADO NO MUNICÍPIO DE</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>8pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>2.6428pt</Top>
+                    <Left>3.36258pt</Left>
+                    <Height>0.37705cm</Height>
+                    <Width>5.61642cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.24177cm</Top>
+                <Left>8.84199cm</Left>
+                <Height>0.90917cm</Height>
+                <Width>10.82463cm</Width>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Textbox Name="textbox12">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Nota Fiscal de Serviço Eletrônica - NFS-e</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>12pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Top>0.62606cm</Top>
+                <Left>0.01237cm</Left>
+                <Height>0.65766cm</Height>
+                <Width>19.60836cm</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox9">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value EvaluationMode="Constant">IBGE</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>66.18917pt</Top>
+                <Left>122.73414pt</Left>
+                <Height>0.37705cm</Height>
+                <Width>2.115cm</Width>
+                <ZIndex>8</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Left>0.03528cm</Left>
+            <Height>3.15095cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle8">
+            <ReportItems>
+              <Textbox Name="textbox39">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>NOME</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>2.96243pt</Left>
+                <Height>0.39378cm</Height>
+                <Width>0.85023cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie2">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!TomadorNome.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.29986cm</Top>
+                <Left>0.15306cm</Left>
+                <Height>0.4cm</Height>
+                <Width>19.43715cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+              <Rectangle Name="Rectangle15">
+                <ReportItems>
+                  <Textbox Name="textbox52">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>BAIRRO</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>5pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>0.90025cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie9">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorBairro.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.29364cm</Top>
+                    <Left>0.18106cm</Left>
+                    <Height>0.39242cm</Height>
+                    <Width>7.67146cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>0.74925cm</Top>
+                <Left>11.73769cm</Left>
+                <Height>0.73175cm</Height>
+                <Width>7.92893cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle36">
+                <ReportItems>
+                  <Textbox Name="textbox65">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>COMPLEMENTO</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>2.96243pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>1.87223cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie27">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorComplemento.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.28981cm</Top>
+                    <Left>0.16137cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>11.43521cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>1.481cm</Top>
+                <Height>0.71674cm</Height>
+                <Width>11.73769cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle14">
+                <ReportItems>
+                  <Textbox Name="textbox49">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>E-MAIL</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>5pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>0.90025cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie8">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorEmail.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.25806cm</Top>
+                    <Left>0.18106cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>7.67146cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>1.481cm</Top>
+                <Left>11.73769cm</Left>
+                <Height>0.71675cm</Height>
+                <Width>7.92893cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle11">
+                <ReportItems>
+                  <Textbox Name="textbox42">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>MUNICÍPIO</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>3.07219pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>1.36025cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie5">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorMunicipio.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.30339cm</Top>
+                    <Left>0.16137cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>7.1584cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.19774cm</Top>
+                <Height>0.73856cm</Height>
+                <Width>7.54202cm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle12">
+                <ReportItems>
+                  <Textbox Name="textbox43">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>UF</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>4pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>0.52788cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie6">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorSiglaUf.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.30339cm</Top>
+                    <Left>0.17639cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>3.88963cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.19774cm</Top>
+                <Left>7.54202cm</Left>
+                <Height>0.73856cm</Height>
+                <Width>4.19567cm</Width>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="TomadorServico">
+                <ReportItems>
+                  <Textbox Name="textbox45">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>CEP</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>5.07512pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>0.79117cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie7">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Code.FormatarCEP(Sum(Fields!TomadorCep.Value, "Rps"))</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.29633cm</Top>
+                    <Left>0.18106cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>7.67146cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.19774cm</Top>
+                <Left>11.73769cm</Left>
+                <Height>0.73856cm</Height>
+                <Width>7.92893cm</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle10">
+                <ReportItems>
+                  <Textbox Name="textbox41">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>CPF/CNPJ</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>3.07219pt</Left>
+                    <Height>0.41422cm</Height>
+                    <Width>1.4308cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie4">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Code.FormatarCPFCNPJ(Sum(Fields!TomadorCnpjCpf.Value, "Rps"), (First(Fields!TomadorTipoCpfCnpj.Value, "Rps") = "Cnpj"))</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.26811cm</Top>
+                    <Left>0.16137cm</Left>
+                    <Height>0.41422cm</Height>
+                    <Width>7.1584cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.9363cm</Top>
+                <Height>0.72455cm</Height>
+                <Width>7.54202cm</Width>
+                <ZIndex>8</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle37">
+                <ReportItems>
+                  <Textbox Name="textbox66">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>IM</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>4pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>0.52788cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie28">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorInscricaoMunicipal.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.27164cm</Top>
+                    <Left>0.17639cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>3.88963cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.93277cm</Top>
+                <Left>7.54202cm</Left>
+                <Height>0.72808cm</Height>
+                <Width>4.19567cm</Width>
+                <ZIndex>9</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+              <Rectangle Name="Rectangle38">
+                <ReportItems>
+                  <Textbox Name="textbox67">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>IE</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0pt</Top>
+                    <Left>5.13234pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>0.40088cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie29">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!TomadorIE.Value, "InfSenior")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.27516cm</Top>
+                    <Left>0.18106cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>7.67146cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>2.9363cm</Top>
+                <Left>11.73769cm</Left>
+                <Height>0.72455cm</Height>
+                <Width>7.92893cm</Width>
+                <ZIndex>10</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>7.74727cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>3.66085cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle9">
+            <ReportItems>
+              <Textbox Name="textbox40">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>ENDEREÇO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>2.96243pt</Left>
+                <Height>0.39525cm</Height>
+                <Width>1.29356cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie3">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!TomadorEndereco.Value, "Rps") + ", " + First(Fields!TomadorNumero.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.29364cm</Top>
+                <Left>0.16137cm</Left>
+                <Height>0.40283cm</Height>
+                <Width>11.44667cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>8.49652cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.73175cm</Height>
+            <Width>11.73769cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle16">
+            <ReportItems>
+              <Textbox Name="marcaAguaSemValorFiscal">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>SEM VALOR FISCAL</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>40pt</FontSize>
+                          <Color>Gainsboro</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.60569cm</Top>
+                <Left>2.56545cm</Left>
+                <Height>1.42021cm</Height>
+                <Width>14.63014cm</Width>
+                <Visibility>
+                  <Hidden>=Parameters!tipoAmbiente.Value = "1"</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Textbox>
+              <Textbox Name="marcaAguaCancelada">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>CANCELADA</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>40pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>Gainsboro</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.74125cm</Top>
+                <Left>2.56545cm</Left>
+                <Height>1.41275cm</Height>
+                <Width>14.68007cm</Width>
+                <ZIndex>1</ZIndex>
+                <Visibility>
+                  <Hidden>=(First(Fields!Situacao.Value, "Rps") &lt;&gt; "Cancelada" And First(Fields!Situacao.Value, "Rps") &lt;&gt; "Cancelada por substituição")</Hidden>
+                </Visibility>
+                <Style>
+                  <Border />
+                </Style>
+              </Textbox>
+              <Textbox Name="Serie10">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Iif(RowNumber("ItemInfSenior") &gt; 0, "", First(Fields!DescricaoServico.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.54225cm</Top>
+                <Left>0.11696cm</Left>
+                <Height>3.87076cm</Height>
+                <Width>19.4428cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style />
+              </Textbox>
+              <Tablix Name="tblItensServico">
+                <TablixBody>
+                  <TablixColumns>
+                    <TablixColumn>
+                      <Width>19.2058cm</Width>
+                    </TablixColumn>
+                  </TablixColumns>
+                  <TablixRows>
+                    <TablixRow>
+                      <Height>0.38128cm</Height>
+                      <TablixCells>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Descricao">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!NomeItem.Value + Iif(String.IsNullOrWhiteSpace(Fields!Observacao.Value), "", " - " + Fields!Observacao.Value)</Value>
+                                      <Style>
+                                        <FontFamily>Times New Roman</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                      </TablixCells>
+                    </TablixRow>
+                  </TablixRows>
+                </TablixBody>
+                <TablixColumnHierarchy>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixColumnHierarchy>
+                <TablixRowHierarchy>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="Details2" />
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixRowHierarchy>
+                <DataSetName>ItemInfSenior</DataSetName>
+                <Top>0.53029cm</Top>
+                <Left>0.16995cm</Left>
+                <Height>0.38128cm</Height>
+                <Width>19.2058cm</Width>
+                <ZIndex>3</ZIndex>
+                <Visibility>
+                  <Hidden>=RowNumber("ItemInfSenior") = 0</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Tablix>
+              <Rectangle Name="Rectangle49">
+                <ReportItems>
+                  <Textbox Name="textbox15">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>DESCRIÇÃO DO SERVIÇO</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>11pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>textbox3</rd:DefaultName>
+                    <Left>0.05887cm</Left>
+                    <Height>0.52203cm</Height>
+                    <Width>19.505cm</Width>
+                    <Style>
+                      <VerticalAlign>Top</VerticalAlign>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+                <Height>0.53399cm</Height>
+                <Width>19.66662cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+            </ReportItems>
+            <Top>13.44072cm</Top>
+            <Left>0.0267cm</Left>
+            <Height>4.41302cm</Height>
+            <Width>19.6752cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle17">
+            <ReportItems>
+              <Textbox Name="Serie11">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!ValorTotalServicos.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Left>16.34113cm</Left>
+                <Height>0.43175cm</Height>
+                <Width>3.2796cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie25">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>VALOR TOTAL DOS SERVIÇOS </Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Height>0.43175cm</Height>
+                <Width>5.72526cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>17.86271cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.43175cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle18">
+            <ReportItems>
+              <Textbox Name="textbox54">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>PIS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>1.23758pt</Left>
+                <Height>0.37609cm</Height>
+                <Width>0.61108cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie12">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!Pis.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.36061cm</Top>
+                <Left>0.75129cm</Left>
+                <Height>0.4cm</Height>
+                <Width>2.97895cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>20.00421cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.81764cm</Height>
+            <Width>3.861cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle19">
+            <ReportItems>
+              <Textbox Name="textbox55">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>COFINS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>0.74169pt</Left>
+                <Height>0.37609cm</Height>
+                <Width>1.22399cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie13">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!Cofins.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.39236cm</Top>
+                <Left>1.11745cm</Left>
+                <Height>0.4cm</Height>
+                <Width>2.63766cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>20.00421cm</Top>
+            <Left>3.89628cm</Left>
+            <Height>0.81764cm</Height>
+            <Width>3.90325cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle20">
+            <ReportItems>
+              <Textbox Name="textbox56">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>INSS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>1.01489pt</Left>
+                <Height>0.39373cm</Height>
+                <Width>0.66001cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie14">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!Inss.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.36213cm</Top>
+                <Left>0.8722cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.2161cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>20.00421cm</Top>
+            <Left>15.50421cm</Left>
+            <Height>0.81764cm</Height>
+            <Width>4.19769cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle21">
+            <ReportItems>
+              <Textbox Name="textbox57">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>IR</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>1.01413pt</Left>
+                <Height>0.37609cm</Height>
+                <Width>0.63011cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie15">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!Ir.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.38883cm</Top>
+                <Left>0.57264cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.12858cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>20.00421cm</Top>
+            <Left>11.6231cm</Left>
+            <Height>0.81764cm</Height>
+            <Width>3.88111cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle22">
+            <ReportItems>
+              <Textbox Name="textbox58">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>CSLL</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>1.28217pt</Left>
+                <Height>0.34404cm</Height>
+                <Width>0.82339cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie16">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!Csll.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.38497cm</Top>
+                <Left>1.0321cm</Left>
+                <Height>0.4cm</Height>
+                <Width>2.61508cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>20.00421cm</Top>
+            <Left>7.79953cm</Left>
+            <Height>0.81764cm</Height>
+            <Width>3.82232cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle24">
+            <ReportItems>
+              <Textbox Name="textbox60">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Valor ISS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.09137pt</Top>
+                <Left>0.64954pt</Left>
+                <Height>0.36703cm</Height>
+                <Width>1.42252cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie18">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!Iss.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.3385cm</Top>
+                <Left>1.24619cm</Left>
+                <Height>0.4cm</Height>
+                <Width>4.94457cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>21.22045cm</Top>
+            <Left>13.42711cm</Left>
+            <Height>0.9167cm</Height>
+            <Width>6.27479cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle25">
+            <ReportItems>
+              <Textbox Name="textbox61">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Alíquota ISS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.29137pt</Top>
+                <Left>1pt</Left>
+                <Height>0.42822cm</Height>
+                <Width>2.27375cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie19">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatPercent(Sum(Fields!Aliquota.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.33267cm</Top>
+                <Left>2.0579cm</Left>
+                <Height>0.4cm</Height>
+                <Width>4.37451cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>21.22045cm</Top>
+            <Left>6.77373cm</Left>
+            <Height>0.9167cm</Height>
+            <Width>6.65338cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle26">
+            <ReportItems>
+              <Textbox Name="textbox62">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Base de Cálculo</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.29137pt</Top>
+                <Left>1.42563pt</Left>
+                <Height>0.38178cm</Height>
+                <Width>1.92644cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie20">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!BaseCalculo.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.33267cm</Top>
+                <Left>2.15312cm</Left>
+                <Height>0.4cm</Height>
+                <Width>4.48481cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>21.22045cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.9167cm</Height>
+            <Width>6.73845cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle27">
+            <ReportItems>
+              <Textbox Name="textbox63">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>SERVIÇO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>1.07516pt</Left>
+                <Height>0.40231cm</Height>
+                <Width>1.36014cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie21">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Microsoft.VisualBasic.Strings.FormatCurrency(Sum(Fields!ValorTotalServicos.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.3853cm</Top>
+                <Left>1.3311cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.07603cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>18.73886cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.82764cm</Height>
+            <Width>4.50438cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle28">
+            <ReportItems>
+              <Textbox Name="Serie22">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatCurrency(Sum(Fields!ValorTotalRps.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Left>16.34113cm</Left>
+                <Height>0.46508cm</Height>
+                <Width>3.2796cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie26">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>VALOR LÍQUIDO DA NFS-e:  </Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Height>0.46508cm</Height>
+                <Width>5.2248cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>22.13715cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.46508cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle29">
+            <ReportItems>
+              <Textbox Name="Serie23">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Iif(String.IsNullOrWhiteSpace(First(Fields!DescricaoValorAproximadoTributos.Value, "TributosInfSenior")), "", First(Fields!DescricaoValorAproximadoTributos.Value, "TributosInfSenior") + System.Environment.NewLine) + 
+First(Fields!InformacoesAdicionais.Value, "Rps") + System.Environment.NewLine + "Esta nota substitui o RPS "+ Sum(Fields!Numero.Value, "Rps").ToString() + " série " + First(Fields!Serie.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Left>0.07389cm</Left>
+                <Height>0.46194cm</Height>
+                <Width>19.54684cm</Width>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>23.13325cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.46194cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle31">
+            <ReportItems>
+              <Image Name="imgLogo2">
+                <Source>Database</Source>
+                <Value>=Parameters!base64Imagem.Value</Value>
+                <MIMEType>image/bmp</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Top>0.33426cm</Top>
+                <Left>0.43299cm</Left>
+                <Height>3cm</Height>
+                <Width>3cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>3.63204cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>3.62218cm</Height>
+            <Width>3.861cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle4">
+            <ReportItems>
+              <Textbox Name="textbox5">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value EvaluationMode="Constant">TOMADOR DO SERVIÇO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Left>0.00838cm</Left>
+                <Height>0.47894cm</Height>
+                <Width>19.61235cm</Width>
+                <Style>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>7.25775cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.47894cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle13">
+            <ReportItems>
+              <Textbox Name="textbox68">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>NOME</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>3.2pt</Left>
+                <Height>0.39378cm</Height>
+                <Width>0.8548cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie30">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorNome.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.30691cm</Top>
+                <Left>0.17639cm</Left>
+                <Height>0.4cm</Height>
+                <Width>15.50719cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>3.63204cm</Top>
+            <Left>3.89628cm</Left>
+            <Height>0.7783cm</Height>
+            <Width>15.80562cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle47">
+            <ReportItems>
+              <Textbox Name="textbox78">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>ENDEREÇO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>3.2pt</Left>
+                <Height>0.39525cm</Height>
+                <Width>1.36526cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie40">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorEndereco.Value, "Rps") + " " + First(Fields!PrestadorNumero.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.32204cm</Top>
+                <Left>0.17639cm</Left>
+                <Height>0.40283cm</Height>
+                <Width>15.50718cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>4.41034cm</Top>
+            <Left>3.89628cm</Left>
+            <Height>0.73025cm</Height>
+            <Width>15.80562cm</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle48">
+            <ReportItems>
+              <Textbox Name="textbox13">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>PRESTADOR DO SERVIÇO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Left>0.00838cm</Left>
+                <Height>0.4921cm</Height>
+                <Width>19.61235cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>3.15095cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.4921cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle40">
+            <ReportItems>
+              <Textbox Name="textbox70">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>COMPLEMENTO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>3.2pt</Left>
+                <Height>0.4cm</Height>
+                <Width>1.70574cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie32">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorComplemento.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.26952cm</Top>
+                <Left>0.17639cm</Left>
+                <Height>0.36825cm</Height>
+                <Width>8.55436cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>5.14161cm</Top>
+            <Left>3.89628cm</Left>
+            <Height>0.69165cm</Height>
+            <Width>8.90769cm</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle42">
+            <ReportItems>
+              <Textbox Name="textbox72">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>MUNICÍPIO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>4.1pt</Left>
+                <Height>0.4cm</Height>
+                <Width>1.39126cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie34">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorMunicipio.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.23143cm</Top>
+                <Left>0.17639cm</Left>
+                <Height>0.4cm</Height>
+                <Width>4.93314cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>5.83327cm</Top>
+            <Left>3.89628cm</Left>
+            <Height>0.68717cm</Height>
+            <Width>5.57926cm</Width>
+            <ZIndex>23</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle44">
+            <ReportItems>
+              <Textbox Name="textbox75">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>CNPJ</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>4.1pt</Left>
+                <Height>0.41422cm</Height>
+                <Width>1.07376cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie37">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Code.FormatarCPFCNPJ(Sum(Fields!PrestadorCnpj.Value, "Rps"), true)</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.31956cm</Top>
+                <Left>0.17639cm</Left>
+                <Height>0.41422cm</Height>
+                <Width>5.22648cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>6.52044cm</Top>
+            <Left>3.89628cm</Left>
+            <Height>0.73378cm</Height>
+            <Width>5.57926cm</Width>
+            <ZIndex>24</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle43">
+            <ReportItems>
+              <Textbox Name="textbox73">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>UF</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.04337pt</Top>
+                <Left>2.79808pt</Left>
+                <Height>0.4cm</Height>
+                <Width>0.49613cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie35">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorSiglaUf.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.28717cm</Top>
+                <Left>0.10583cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.04565cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>5.83327cm</Top>
+            <Left>9.47554cm</Left>
+            <Height>0.68717cm</Height>
+            <Width>3.32843cm</Width>
+            <ZIndex>25</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle39">
+            <ReportItems>
+              <Textbox Name="textbox69">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>BAIRRO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.0288pt</Top>
+                <Left>2.29978pt</Left>
+                <Height>0.4cm</Height>
+                <Width>0.85732cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie31">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorBairro.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.28677cm</Top>
+                <Left>0.17638cm</Left>
+                <Height>0.39242cm</Height>
+                <Width>6.5995cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>5.14059cm</Top>
+            <Left>12.80398cm</Left>
+            <Height>0.69267cm</Height>
+            <Width>6.89792cm</Width>
+            <ZIndex>26</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle41">
+            <ReportItems>
+              <Textbox Name="textbox71">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>E-MAIL</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>2.69972pt</Left>
+                <Height>0.4cm</Height>
+                <Width>0.9463cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie33">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!EmailPrestador.Value, "InfSenior")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.33045cm</Top>
+                <Left>0.15873cm</Left>
+                <Height>0.4cm</Height>
+                <Width>6.61714cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>6.52044cm</Top>
+            <Left>12.80398cm</Left>
+            <Height>0.73378cm</Height>
+            <Width>6.89792cm</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="TomadorServico2">
+            <ReportItems>
+              <Textbox Name="textbox74">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>CEP</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.23216pt</Top>
+                <Left>2.89553pt</Left>
+                <Height>0.4cm</Height>
+                <Width>0.79381cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie36">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Code.FormatarCEP(Sum(Fields!PrestadorCep.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.28564cm</Top>
+                <Left>0.16564cm</Left>
+                <Height>0.4cm</Height>
+                <Width>6.5995cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>5.8348cm</Top>
+            <Left>12.80398cm</Left>
+            <Height>0.68564cm</Height>
+            <Width>6.89792cm</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle46">
+            <ReportItems>
+              <Textbox Name="textbox77">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>IM</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>6pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>2.79808pt</Left>
+                <Height>0.4cm</Height>
+                <Width>0.49613cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie39">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PrestadorInscricaoMunicipal.Value, "Rps")</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.30203cm</Top>
+                <Left>0.09871cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.05277cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>6.52044cm</Top>
+            <Left>9.47554cm</Left>
+            <Height>0.73378cm</Height>
+            <Width>3.32843cm</Width>
+            <ZIndex>29</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle50">
+            <ReportItems>
+              <Textbox Name="textbox16">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>IMPOSTOS FEDERAIS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Left>0.05223cm</Left>
+                <Height>0.43065cm</Height>
+                <Width>19.505cm</Width>
+                <Style>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>19.5665cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.43065cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle51">
+            <ReportItems>
+              <Textbox Name="textbox17">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>VALORES TOTAIS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Left>0.11573cm</Left>
+                <Height>0.43902cm</Height>
+                <Width>19.47448cm</Width>
+                <Style>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>18.29446cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.43902cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle52">
+            <ReportItems>
+              <Textbox Name="textbox79">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>DEDUÇÕES</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>0.94954pt</Left>
+                <Height>0.40906cm</Height>
+                <Width>1.55269cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie41">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Microsoft.VisualBasic.Strings.FormatCurrency(Sum(Fields!TotalDeducoes.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.37855cm</Top>
+                <Left>1.41816cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.27264cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>18.73886cm</Top>
+            <Left>4.53966cm</Left>
+            <Height>0.82764cm</Height>
+            <Width>4.86719cm</Width>
+            <ZIndex>32</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle53">
+            <ReportItems>
+              <Textbox Name="textbox80">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>DESCONTO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>1.74954pt</Left>
+                <Height>0.40231cm</Height>
+                <Width>1.62667cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie42">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Microsoft.VisualBasic.Strings.FormatCurrency(Sum(Fields!DescontoIncondicionado.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.3853cm</Top>
+                <Left>1.44276cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.36788cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>18.73886cm</Top>
+            <Left>9.40685cm</Left>
+            <Height>0.82764cm</Height>
+            <Width>4.99481cm</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle54">
+            <ReportItems>
+              <Textbox Name="textbox81">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>OUTRAS RETENÇÕES</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0pt</Top>
+                <Left>3.88094pt</Left>
+                <Height>0.40231cm</Height>
+                <Width>3.13027cm</Width>
+                <Style />
+              </Textbox>
+              <Textbox Name="Serie43">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Microsoft.VisualBasic.Strings.FormatCurrency(Sum(Fields!OutrasRetencoes.Value, "Rps"))</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Serie</rd:DefaultName>
+                <Top>0.3853cm</Top>
+                <Left>1.13835cm</Left>
+                <Height>0.4cm</Height>
+                <Width>4.0845cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style />
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>18.73886cm</Top>
+            <Left>14.40166cm</Left>
+            <Height>0.82764cm</Height>
+            <Width>5.30024cm</Width>
+            <ZIndex>34</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle55">
+            <ReportItems>
+              <Textbox Name="textbox18">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>IMPOSTOS MUNICIPAIS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Top>0.00001cm</Top>
+                <Left>0.07389cm</Left>
+                <Height>0.3986cm</Height>
+                <Width>19.505cm</Width>
+                <Style>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>20.82184cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.40278cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>35</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle56">
+            <ReportItems>
+              <Textbox Name="textbox19">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>INFORMAÇÕES ADICIONAIS</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Top>0.01696cm</Top>
+                <Left>0.07389cm</Left>
+                <Height>0.51407cm</Height>
+                <Width>19.54684cm</Width>
+                <Style>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>22.60223cm</Top>
+            <Left>0.03528cm</Left>
+            <Height>0.53103cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>36</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Textbox Name="textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Gerado por eDocs - www.senior.com.br - 0800 648 3300</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontSize>6pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Top>23.6091cm</Top>
+            <Left>12.27313cm</Left>
+            <Height>0.26259cm</Height>
+            <Width>7.42877cm</Width>
+            <ZIndex>37</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Rectangle Name="Rectangle57">
+            <ReportItems>
+              <Textbox Name="textbox21">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>INTERMEDIÁRIO DO SERVIÇO</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <Left>0.01624cm</Left>
+                <Height>0.52203cm</Height>
+                <Width>19.59998cm</Width>
+                <Style>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Rectangle Name="Rectangle23">
+                <ReportItems>
+                  <Textbox Name="textbox44">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>NOME/RAZÃO SOCIAL</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>1pt</Top>
+                    <Left>3.07219pt</Left>
+                    <Height>0.39378cm</Height>
+                    <Width>3.04343cm</Width>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie17">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!IntermediarioServicoRazaoSocial.Value, "Rps")</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>0.29986cm</Top>
+                    <Left>0.15595cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>19.21509cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style />
+                  </Textbox>
+                  <Rectangle Name="Rectangle45">
+                    <KeepTogether>true</KeepTogether>
+                    <Top>0.77043cm</Top>
+                    <Height>0.74367cm</Height>
+                    <Width>11.78989cm</Width>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                        <Width>0.3pt</Width>
+                      </Border>
+                    </Style>
+                  </Rectangle>
+                  <Rectangle Name="Rectangle58">
+                    <ReportItems>
+                      <Textbox Name="textbox50">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>INSCRIÇÃO MUNICIPAL</Value>
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                  <FontSize>6pt</FontSize>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <Top>0pt</Top>
+                        <Left>3.76246pt</Left>
+                        <Height>0.4cm</Height>
+                        <Width>3.37109cm</Width>
+                        <Style />
+                      </Textbox>
+                      <Textbox Name="Serie44">
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=First(Fields!IntermediarioServicoInscMunicipal.Value, "Rps")</Value>
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Serie</rd:DefaultName>
+                        <Top>0.25806cm</Top>
+                        <Left>0.1374cm</Left>
+                        <Height>0.4cm</Height>
+                        <Width>7.44842cm</Width>
+                        <ZIndex>1</ZIndex>
+                        <Style />
+                      </Textbox>
+                    </ReportItems>
+                    <KeepTogether>true</KeepTogether>
+                    <Top>0.77042cm</Top>
+                    <Left>11.78522cm</Left>
+                    <Height>0.74368cm</Height>
+                    <Width>7.8814cm</Width>
+                    <ZIndex>3</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                        <Width>0.3pt</Width>
+                      </Border>
+                    </Style>
+                  </Rectangle>
+                  <Textbox Name="textbox76">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>CPF/CNPJ</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>6pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>21.83883pt</Top>
+                    <Left>3.18195pt</Left>
+                    <Height>0.4cm</Height>
+                    <Width>1.87223cm</Width>
+                    <ZIndex>4</ZIndex>
+                    <Style />
+                  </Textbox>
+                  <Textbox Name="Serie38">
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Code.FormatarCPFCNPJ(First(Fields!IntermediarioServicoCpfCnpj.Value, "Rps"), (First(Fields!IntermediarioServicoTipoPessoa.Value, "Rps") = "Cnpj"))</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Left</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Serie</rd:DefaultName>
+                    <Top>1.06024cm</Top>
+                    <Left>0.15523cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>11.43521cm</Width>
+                    <ZIndex>5</ZIndex>
+                    <Style />
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>0.5185cm</Top>
+                <Height>1.5141cm</Height>
+                <Width>19.66662cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.3pt</Width>
+                  </Border>
+                </Style>
+              </Rectangle>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>11.40812cm</Top>
+            <Left>0.03141cm</Left>
+            <Height>2.0326cm</Height>
+            <Width>19.66662cm</Width>
+            <ZIndex>38</ZIndex>
+            <Visibility>
+              <Hidden>=First(Fields!IntermediarioServicoCpfCnpj.Value, "Rps") = ""</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Width>0.3pt</Width>
+              </Border>
+            </Style>
+          </Rectangle>
+        </ReportItems>
+        <Height>23.90026cm</Height>
+        <Style />
+      </Body>
+      <Width>19.7019cm</Width>
+      <Page>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>0.1cm</LeftMargin>
+        <RightMargin>0.1cm</RightMargin>
+        <TopMargin>0.1cm</TopMargin>
+        <BottomMargin>0.1cm</BottomMargin>
+        <ColumnSpacing>0.5cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="base64Imagem">
+      <DataType>String</DataType>
+      <Prompt>caminhoLogo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="tipoAmbiente">
+      <DataType>String</DataType>
+      <Prompt>tipoAmbiente</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>
+    Public Function FormatarCPFCNPJ(Valor As String , ehCnpj As Boolean) As String
+
+    If Trim(Valor) = "" OR Valor = "0" Then
+    FormatarCPFCNPJ = ""
+
+    ElseIf ehCnpj Then
+    While  Len(Valor) &lt; 14
+    Valor = "0" &amp; Valor
+    End While
+
+    FormatarCPFCNPJ = Mid(Valor, 1, 2) &amp; "." &amp; _
+    Mid(Valor, 3, 3) &amp; "." &amp; _
+    Mid(Valor, 6, 3) &amp; "/" &amp; _
+    Mid(Valor, 9, 4) &amp; "-" &amp; _
+    Mid(Valor, 13, 2)
+    Else
+    While   Len(Valor) &lt; 11
+    Valor = "0" &amp; Valor
+    End While
+
+    FormatarCPFCNPJ = Mid(Valor, 1, 3) &amp; "." &amp; _
+    Mid(Valor, 4, 3) &amp; "." &amp; _
+    Mid(Valor, 7, 3) &amp; "-" &amp; _
+    Mid(Valor, 10, 2)
+    End If
+    End Function
+
+    Public Function FormatarCEP(Valor As String ) As String
+
+    If Trim(Valor) = "" OR Valor = "0" Then
+    FormatarCEP = ""
+    Else
+
+    While  Len(Valor) &lt; 8
+    Valor = "0" &amp; Valor
+    End While
+
+    FormatarCEP =  Mid(Valor, 1, 2) &amp; _
+    Mid(Valor, 3, 3) &amp; "-" &amp; _
+    Mid(Valor, 6, 3)
+    End If
+    End Function</Code>
+  <Language>pt-BR</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>3b67e3e5-4eec-4129-8384-b7d7ee405140</rd:ReportID>
+</Report>
