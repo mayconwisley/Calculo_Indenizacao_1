@@ -9,7 +9,7 @@ namespace BancoDados
         protected SQLiteConnection liteConnection;
         protected bool Conectar()
         {
-            string strConexao = @"Data Source=|DataDirectory|BancoDados\Indenizacao.db; Password=2802feer";
+            string strConexao = @"Data Source=|DataDirectory|BancoDados\Indenizacao_1.db;";
 
             liteConnection = new SQLiteConnection(strConexao);
             try

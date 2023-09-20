@@ -142,8 +142,8 @@ namespace CalculoIndenizacao
                 txtDecricao.Text = dgvListaLancamento.Rows[e.RowIndex].Cells["DescricaoComplemento"].Value.ToString();
                 txtValor.Text = dgvListaLancamento.Rows[e.RowIndex].Cells["ValorComplemento"].Value.ToString();
 
-                bool tipo = bool.Parse(dgvListaLancamento.Rows[e.RowIndex].Cells["TipoComplemento"].Value.ToString());
-                if (tipo == true)
+                int tipo = int.Parse(dgvListaLancamento.Rows[e.RowIndex].Cells["TipoComplemento"].Value.ToString());
+                if (tipo == 1)
                 {
                     cbTipo.Checked = true;
                 }
