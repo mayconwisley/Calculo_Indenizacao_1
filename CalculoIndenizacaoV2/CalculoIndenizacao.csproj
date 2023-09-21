@@ -32,10 +32,10 @@
     <Content Include="1486564177-finance-finance-calculator_81497.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MetroModernUI" Version="1.4.0" />
+    <PackageReference Include="MetroFrameworkCore" Version="1.0.2" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1586.0" />
-    <PackageReference Include="Microsoft.SqlServer.Types" Version="160.1000.6" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.18" />
+
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Negocio\Negocio.csproj" />

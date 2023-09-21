@@ -3,6 +3,7 @@ using Microsoft.Reporting.WinForms;
 using Negocio.Calculo;
 using System;
 using System.Data;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace CalculoIndenizacao
@@ -103,7 +104,7 @@ namespace CalculoIndenizacao
             }
         }
 
-
+        [SupportedOSPlatform("windows")]
         private void FrmVisualizarRelatorio_Load(object sender, EventArgs e)
         {
             reportDataSource = new ReportDataSource();
