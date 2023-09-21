@@ -131,7 +131,7 @@ namespace CalculoIndenizacao
             }
 
             this.RvVisualizarRelatorio.RefreshReport();
-            this.RvVisualizarRelatorio.SetDisplayMode(DisplayMode.PrintLayout);
+            this.RvVisualizarRelatorio.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             this.RvVisualizarRelatorio.ZoomMode = ZoomMode.Percent;
             this.RvVisualizarRelatorio.ZoomPercent = 100;
             this.RvVisualizarRelatorio.RefreshReport();

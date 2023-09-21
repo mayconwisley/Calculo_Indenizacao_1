@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            // TODO Microsoft.Reporting.WinForms.ReportViewer no longer supported.
             this.RvVisualizarRelatorio = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer RvVisualizarRelatorio;
+        // TODO Microsoft.Reporting.WinForms.ReportViewer no longer supported.
+                private Microsoft.Reporting.WinForms.ReportViewer RvVisualizarRelatorio;
     }
 }

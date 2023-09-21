@@ -67,8 +67,8 @@ namespace BancoDados
                         liteCommand.Parameters.Add(new SQLiteParameter(oleDbParameter.ParameterName, oleDbParameter.Value));
                     }
 
-                    SQLiteDataAdapter liteDataAdapter = new SQLiteDataAdapter(liteCommand);
-                    DataTable dataTable = new DataTable();
+                    SQLiteDataAdapter liteDataAdapter = new(liteCommand);
+                    DataTable dataTable = new();
                     liteDataAdapter.Fill(dataTable);
 
                     return dataTable;

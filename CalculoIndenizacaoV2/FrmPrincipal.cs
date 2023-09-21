@@ -12,10 +12,7 @@ namespace CalculoIndenizacao
         {
             get
             {
-                if (_instance == null)
-                {
-                    _instance = new FrmPrincipal();
-                }
+                _instance ??= new FrmPrincipal();
                 return _instance;
             }
         }
@@ -132,7 +129,7 @@ namespace CalculoIndenizacao
         {
             if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UCCadastro"))
             {
-                UCCadastro uCCadastro = new UCCadastro
+                UCCadastro uCCadastro = new()
                 {
                     Dock = DockStyle.Fill
                 };
@@ -145,7 +142,7 @@ namespace CalculoIndenizacao
         {
             if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UcCalculo"))
             {
-                UcCalculo ucCalculo = new UcCalculo
+                UcCalculo ucCalculo = new()
                 {
                     Dock = DockStyle.Fill
                 };
@@ -158,7 +155,7 @@ namespace CalculoIndenizacao
         {
             if (!FrmPrincipal.Instance.MetroContainer.Controls.ContainsKey("UCRelatorio"))
             {
-                UCRelatorio uCRelatorio = new UCRelatorio
+                UCRelatorio uCRelatorio = new()
                 {
                     Dock = DockStyle.Fill
                 };
