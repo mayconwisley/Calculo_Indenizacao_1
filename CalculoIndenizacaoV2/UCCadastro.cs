@@ -1,48 +1,47 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CalculoIndenizacao
+namespace CalculoIndenizacao;
+
+public partial class UCCadastro : MetroFramework.Controls.MetroUserControl
 {
-    public partial class UCCadastro : MetroFramework.Controls.MetroUserControl
+    public UCCadastro()
     {
-        public UCCadastro()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        bool abrir = true;
-        private void MtTlCadEmpregado_Click(object sender, EventArgs e)
+    bool abrir = true;
+    private void MtTlCadEmpregado_Click(object sender, EventArgs e)
+    {
+        FrmCadastroEmpragado cadastroEmpragado = new();
+        foreach (Form item in Application.OpenForms)
         {
-            FrmCadastroEmpragado cadastroEmpragado = new FrmCadastroEmpragado();
-            foreach (Form item in Application.OpenForms)
+            if (item is FrmCadastroEmpragado)
             {
-                if (item is FrmCadastroEmpragado)
-                {
-                    item.Focus();
-                    abrir = false;
-                }
-            }
-            if (abrir)
-            {
-                cadastroEmpragado.Show();
+                item.Focus();
+                abrir = false;
             }
         }
-
-        private void MtTlCadComplemento_Click(object sender, EventArgs e)
+        if (abrir)
         {
-            FrmCadastroComplemento cadastroComplemento = new FrmCadastroComplemento();
-            foreach (Form item in Application.OpenForms)
+            cadastroEmpragado.Show();
+        }
+    }
+
+    private void MtTlCadComplemento_Click(object sender, EventArgs e)
+    {
+        FrmCadastroComplemento cadastroComplemento = new();
+        foreach (Form item in Application.OpenForms)
+        {
+            if (item is FrmCadastroComplemento)
             {
-                if (item is FrmCadastroComplemento)
-                {
-                    item.Focus();
-                    abrir = false;
-                }
+                item.Focus();
+                abrir = false;
             }
-            if (abrir)
-            {
-                cadastroComplemento.Show();
-            }
+        }
+        if (abrir)
+        {
+            cadastroComplemento.Show();
         }
     }
 }

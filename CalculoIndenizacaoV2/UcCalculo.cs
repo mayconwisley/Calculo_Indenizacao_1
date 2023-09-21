@@ -1,48 +1,47 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CalculoIndenizacao
+namespace CalculoIndenizacao;
+
+public partial class UcCalculo : MetroFramework.Controls.MetroUserControl
 {
-    public partial class UcCalculo : MetroFramework.Controls.MetroUserControl
+    public UcCalculo()
     {
-        public UcCalculo()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        bool abrir = true;
-        private void MtTlCalCalcular_Click(object sender, EventArgs e)
+    bool abrir = true;
+    private void MtTlCalCalcular_Click(object sender, EventArgs e)
+    {
+        FrmCalculoEstabilidade calculoEstabilidade = new();
+        foreach (Form item in Application.OpenForms)
         {
-            FrmCalculoEstabilidade calculoEstabilidade = new FrmCalculoEstabilidade();
-            foreach (Form item in Application.OpenForms)
+            if (item is FrmCalculoEstabilidade)
             {
-                if (item is FrmCalculoEstabilidade)
-                {
-                    item.Focus();
-                    abrir = false;
-                }
-            }
-            if (abrir)
-            {
-                calculoEstabilidade.Show();
+                item.Focus();
+                abrir = false;
             }
         }
-
-        private void MtTlCalListCalculo_Click(object sender, EventArgs e)
+        if (abrir)
         {
-            FrmListaCalculo listaCalculo = new FrmListaCalculo();
-            foreach (Form item in Application.OpenForms)
+            calculoEstabilidade.Show();
+        }
+    }
+
+    private void MtTlCalListCalculo_Click(object sender, EventArgs e)
+    {
+        FrmListaCalculo listaCalculo = new();
+        foreach (Form item in Application.OpenForms)
+        {
+            if (item is FrmListaCalculo)
             {
-                if (item is FrmListaCalculo)
-                {
-                    item.Focus();
-                    abrir = false;
-                }
+                item.Focus();
+                abrir = false;
             }
-            if (abrir)
-            {
-                listaCalculo.Show();
-            }
+        }
+        if (abrir)
+        {
+            listaCalculo.Show();
         }
     }
 }

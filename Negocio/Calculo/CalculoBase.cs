@@ -7,7 +7,7 @@ namespace Negocio.Calculo
         //Calculo valor da indenização sem as verbas adicionais
         public static decimal Indenizacao(decimal media, int diasBase, int diasEstabilidade)
         {
-            decimal vlrIndenizacao = media / diasBase * diasEstabilidade;
+            decimal vlrIndenizacao = (media / diasBase) * diasEstabilidade;
             vlrIndenizacao = Math.Round(vlrIndenizacao, 2);
             return vlrIndenizacao;
         }

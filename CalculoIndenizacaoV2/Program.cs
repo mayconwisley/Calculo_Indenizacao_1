@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CalculoIndenizacao
+namespace CalculoIndenizacao;
+
+static class Program
 {
-    static class Program
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
-        }
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new FrmPrincipal());
     }
 }
