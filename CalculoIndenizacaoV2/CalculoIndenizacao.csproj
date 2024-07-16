@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
-   <PropertyGroup>
+  <PropertyGroup>
     <ApplicationIcon>1486564177-finance-finance-calculator_81497.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
@@ -33,9 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MetroFrameworkCore" Version="1.0.2" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.21" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.18" />
-
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Negocio\Negocio.csproj" />
