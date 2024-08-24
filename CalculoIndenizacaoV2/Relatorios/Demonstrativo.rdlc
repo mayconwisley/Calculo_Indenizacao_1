@@ -825,7 +825,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1708,7 +1707,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Sistema de calculo indenização - v2.0 - Maycon Wisley</Value>
+                  <Value>Sistema de calculo indenização - v2.0</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>

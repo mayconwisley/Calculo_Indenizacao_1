@@ -34,7 +34,7 @@
   <ItemGroup>
     <PackageReference Include="MetroFrameworkCore" Version="1.0.2" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.18" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.22" />
 
   </ItemGroup>
   <ItemGroup>
